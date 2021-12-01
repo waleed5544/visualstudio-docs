@@ -6,7 +6,8 @@ ms.topic: "conceptual"
 ms.devlang: javascript
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
+ms.technology: vs-javascript
 dev_langs:
   - JavaScript
 ms.workload:
@@ -18,7 +19,9 @@ If you are developing a Node.js app with a lot of npm packages, it's not uncommo
 
 The npm package versioning system has strict rules. The version format follows here:
 
-    [major].[minor].[patch]
+```
+[major].[minor].[patch]
+```
 
 Let's say you have a package in your app with a version of 5.2.1. The major version is 5, the minor version is 2, and the patch is 1.
 

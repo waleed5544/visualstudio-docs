@@ -1,22 +1,25 @@
 ---
-title: "IDebugStackFrame2::GetLanguageInfo | Microsoft Docs"
-ms.date: "11/04/2016"
+description: "Gets the language associated with this stack frame."
+title: IDebugStackFrame2::GetLanguageInfo | Microsoft Docs
+ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-  - "IDebugStackFrame2::GetLanguageInfo"
+- IDebugStackFrame2::GetLanguageInfo
 helpviewer_keywords:
-  - "IDebugStackFrame2::GetLanguageInfo"
+- IDebugStackFrame2::GetLanguageInfo
 ms.assetid: 0e12fd92-f155-46a7-8272-cda279388cfb
-author: madskristensen
-ms.author: madsk
-manager: jillfra
+author: leslierichardson95
+ms.author: lerich
+manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
-  - "vssdk"
+- vssdk
 dev_langs:
-  - CPP
-  - CSharp
+- CPP
+- CSharp
 ---
 # IDebugStackFrame2::GetLanguageInfo
+
 Gets the language associated with this stack frame.
 
 ## Syntax
@@ -36,26 +39,29 @@ int GetLanguageInfo ( 
 ```
 
 ## Parameters
+
 `pbstrLanguage`\
 [out] Returns the name of the language that implements the method associated with this stack frame.
 
 `pguidLanguage`\
 [out] Returns the `GUID` of the language. For the [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] languages, for example, the following can be returned:
 
--   `guidVBScriptLang`\
+- `guidVBScriptLang`\
 
--   `guidJScriptLang`\
+- `guidJScriptLang`\
 
--   `guidCPPLang`\
+- `guidCPPLang`\
 
--   `guidVBLang`\
+- `guidVBLang`\
 
--   `guidSQLLang`\
+- `guidSQLLang`\
 
--   `guidScriptLang`\
+- `guidScriptLang`\
 
 ## Return Value
+
  If successful, returns `S_OK`; otherwise, returns an error code.
 
 ## See also
+
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

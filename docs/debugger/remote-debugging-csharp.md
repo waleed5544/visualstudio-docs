@@ -1,6 +1,7 @@
 ---
 title: "Remote Debug a C# or VB project | Microsoft Docs"
-ms.custom: ['remotedebugging"=', 'seodec18']
+description: Learn how to debug a Visual Studio C# or Visual Basic application from a remote computer by following these step-by-step instructions.
+ms.custom: ['remotedebugging"=']
 ms.date: "08/14/2018"
 ms.topic: "conceptual"
 dev_langs:
@@ -14,7 +15,8 @@ helpviewer_keywords:
 ms.assetid: a9753fbb-e7f4-47f0-9dbe-9de90c6c8457
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
   - "dotnet"
 ---
@@ -59,14 +61,17 @@ The debugger cannot deploy Visual C# or Visual Basic desktop applications to a r
 
 4. On the **Properties** page, choose the **Debug** tab.
 
-    ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")
+    ![Screenshot of the Debug tab in the Visual Studio Solution Explorer Properties. The Use remote machine property is set to 'MJO-DL:4022'.](../debugger/media/remotedebuggercsharp.png)
 
 5. Make sure the **Working directory** text box is empty.
 
 6. Choose **Use remote machine**, and type **yourmachinename:port** in the text box. (The port number is shown in the remote debugger window. The port number increments 2 in each version of Visual Studio).
 
     In this example, use:
-    ::: moniker range=">=vs-2019"
+	::: moniker range="vs-2022"
+    **MJO-DL:4026** on Visual Studio 2019
+    ::: moniker-end
+    ::: moniker range="vs-2019"
     **MJO-DL:4024** on Visual Studio 2019
     ::: moniker-end
     ::: moniker range="vs-2017"
@@ -84,11 +89,11 @@ The debugger cannot deploy Visual C# or Visual Basic desktop applications to a r
     > [!CAUTION]
     > Do not make changes to the code or rebuild (or you must repeat this step). The executable you copied to the remote machine must exactly match your local source and symbols.
 
-    You can copy the project manually, use Xcopy, Robocopy, Powershell, or other options.
+    You can copy the project manually, use XCopy, Robocopy, PowerShell, or other options.
 
 11. Make sure the remote debugger is running on the target machine (If it's not, search for **Remote Debugger** in the **Start** menu). The remote debugger window looks like this.
 
-     ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")
+     ![Screenshot of the Visual Studio 2017 Remote Debugger window. One action is listed that indicates the debugger is running on the target machine.](../debugger/media/remotedebuggerwindow.png)
 
 12. In Visual Studio, start debugging (**Debug > Start Debugging**, or **F5**).
 
@@ -108,8 +113,8 @@ The debugger cannot deploy Visual C# or Visual Basic desktop applications to a r
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 
-## See Also
-- [Debugging in Visual Studio](../debugger/index.md)
+## See also
+- [Debugging in Visual Studio](../debugger/index.yml)
 - [First look at the debugger](../debugger/debugger-feature-tour.md)
 - [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)

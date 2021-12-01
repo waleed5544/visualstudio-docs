@@ -1,15 +1,18 @@
 ---
 title: Processing Text Templates by using a Custom Host
+description: Learn that the text template transformation process takes a text template file as the input and produces a text file as the output.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
-  - "text templates, in application or VS extension"
-  - "text templates, custom directive hosts"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+- text templates, in application or VS extension
+- text templates, custom directive hosts
+author: mgoertz-msft
+ms.author: mgoertz
+manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Process Text Templates by using a Custom Host
 
@@ -38,18 +41,18 @@ string output = engine.ProcessTemplate(templateString, host);
 
  Your application must find and provide the template, and must deal with the output.
 
- In the `host` parameter, you must provide a class that implements <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. This is called back by the Engine.
+ In the `host` parameter, you must provide a class that implements [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). This is called back by the Engine.
 
  The host must be able to log errors, resolve references to assembly and include files, provide an Application Domain in which the template can execute, and call the appropriate processor for each directive.
 
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> is defined in **Microsoft.VisualStudio.TextTemplating.\*.0.dll**, and <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> is defined in **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0.dll**.
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> is defined in **Microsoft.VisualStudio.TextTemplating.\*.0.dll**, and [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) is defined in **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0.dll**.
 
 ## In This Section
  [Walkthrough: Creating a Custom Text Template Host](../modeling/walkthrough-creating-a-custom-text-template-host.md)
  Shows you how to create a custom text template host that makes the text template functionality available outside Visual Studio.
 
 ## Reference
- <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>
+ [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))
 
 ## Related Sections
 

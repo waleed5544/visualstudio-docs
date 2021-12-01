@@ -1,16 +1,19 @@
 ---
 title: Create a simple data application by using ADO.NET
+description: Learn to create a simple forms-to-data application by using Windows Forms and ADO.NET in Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 08/23/2017
 ms.topic: conceptual
 dev_langs:
-  - "VB"
-  - "CSharp"
+- VB
+- CSharp
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
-  - "data-storage"
+- data-storage
 ---
 # Create a simple data application by using ADO.NET
 
@@ -84,9 +87,9 @@ Create the sample database by following these steps:
 |Button|Name = btnGoToFillOrCancel|
 |Button|Name = btnExit|
 
- **NewCustomer form**
+**NewCustomer form**
 
- ![Add  a new customer and place an order](../data-tools/media/simpleappnewcust.png)
+![Add  a new customer and place an order](../data-tools/media/simpleappnewcust.png)
 
 |Controls for the NewCustomer form|Properties|
 | - |----------------|
@@ -99,9 +102,9 @@ Create the sample database by following these steps:
 |Button|Name = btnAddAnotherAccount|
 |Button|Name = btnAddFinish|
 
- **FillOrCancel form**
+**FillOrCancel form**
 
- ![fill or cancel orders](../data-tools/media/simpleappcancelfill.png)
+![fill or cancel orders](../data-tools/media/simpleappcancelfill.png)
 
 |Controls for the FillOrCancel form|Properties|
 | - |----------------|
@@ -114,9 +117,9 @@ Create the sample database by following these steps:
 |Button|Name = btnFinishUpdates|
 
 ## Store the connection string
- When your application tries to open a connection to the database, your application must have access to the connection string. To avoid entering the string manually on each form, store the string in the *App.config* file in your project, and create a method that returns the string when the method is called from any form in your application.
+When your application tries to open a connection to the database, your application must have access to the connection string. To avoid entering the string manually on each form, store the string in the *App.config* file in your project, and create a method that returns the string when the method is called from any form in your application.
 
- You can find the connection string by right-clicking on the **Sales** data connection in **Server Explorer** and choosing **Properties**. Locate the **ConnectionString** property, then use **Ctrl**+**A**, **Ctrl**+**C** to select and copy the string to the clipboard.
+You can find the connection string by right-clicking on the **Sales** data connection in **Server Explorer** and choosing **Properties**. Locate the **ConnectionString** property, then use **Ctrl**+**A**, **Ctrl**+**C** to select and copy the string to the clipboard.
 
 1. If you're using C#, in **Solution Explorer**, expand the **Properties** node under the project, and then open the **Settings.settings** file.
     If you're using Visual Basic, in **Solution Explorer**, click **Show All Files**, expand the **My Project** node, and then open the **Settings.settings** file.
@@ -154,8 +157,8 @@ Double-click the three buttons on the Navigation form to create empty event hand
 
 In the code page for the Navigation form, complete the method bodies for the three button click event handlers as shown in the following code.
 
-[!code-csharp[Navigation#1](../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs#1)]
-[!code-vb[Navigation#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb#1)]
+:::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs" id="Snippet1":::
+:::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb" id="Snippet1":::
 
 ### NewCustomer form
 
@@ -181,13 +184,13 @@ To complete the NewCustomer form logic, follow these steps.
 
 2. Add some variables and helper methods to the class as shown in the following code.
 
-     [!code-csharp[NewCustomer#1](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#1)]
-     [!code-vb[NewCustomer#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#1)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet1":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet1":::
 
 3. Complete the method bodies for the four button click event handlers as shown in the following code.
 
-     [!code-csharp[NewCustomer#2](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#2)]
-     [!code-vb[NewCustomer#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#2)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet2":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet2":::
 
 ### FillOrCancel form
 
@@ -215,13 +218,13 @@ To complete the FillOrCancel form logic, follow these steps.
 
 2. Add a variable and helper method to the class as shown in the following code.
 
-     [!code-csharp[FillOrCancel#1](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#1)]
-     [!code-vb[FillOrCancel#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#1)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet1":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet1":::
 
 3. Complete the method bodies for the four button click event handlers as shown in the following code.
 
-     [!code-csharp[FillOrCancel#2](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#2)]
-     [!code-vb[FillOrCancel#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#2)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet2":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet2":::
 
 ## Test your application
 

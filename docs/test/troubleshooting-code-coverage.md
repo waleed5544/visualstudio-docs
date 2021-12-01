@@ -1,12 +1,15 @@
 ---
-title: "Troubleshooting Code Coverage"
-ms.date: 11/04/2016
+title: Troubleshooting Code Coverage
+description: Learn how to resolve erroneous empty results messages when you expect Visual Studio to collect data for native and managed assemblies.
+ms.custom: SEO-VS-2020
+ms.date: 03/31/2020
 ms.topic: troubleshooting
-ms.author: gewarren
-manager: jillfra
+ms.author: mikejo
+manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
-  - "multiple"
-author: gewarren
+- multiple
+author: mikejo5000
 ---
 # Troubleshoot code coverage
 
@@ -16,14 +19,20 @@ The code coverage analysis tool in Visual Studio collects data for native and ma
 
 If you choose an **Analyze Code Coverage** command on the **Test** menu, and if the build and tests run successfully, then you should see a list of results in the **Code Coverage** window. You might have to expand the items to see the detail.
 
+::: moniker range=">=vs-2019"
+![Code coverage results with coloring](../test/media/vs-2019/codecoverage1.png)
+::: moniker-end
+::: moniker range="vs-2017"
 ![Code coverage results with coloring](../test/media/codecoverage1.png)
+::: moniker-end
 
 For more information, see [Use code coverage to determine how much code is being tested](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
 ## Possible reasons for seeing no results or old results
 
 ### Do you have the right edition of Visual Studio?
- You need Visual Studio Enterprise.
+
+You need Visual Studio Enterprise.
 
 ### No tests were executed
 
@@ -37,7 +46,7 @@ Resolution&mdash;In Test Explorer, choose **Run All** to verify that the tests r
 
 When you modify and rerun your tests, a previous code coverage result can still be visible, including the code coloring from that old run.
 
-1. Run Analyze Code Coverage.
+1. Run **Analyze Code Coverage**.
 
 2. Make sure that you have selected the most recent result set in the **Code Coverage Results** window.
 
@@ -50,6 +59,8 @@ Explanation&mdash;The code coverage engine requires that every assembly has its 
 The *.pdb* file must be generated from the same build as the *.dll* or *.exe* files.
 
 Resolution&mdash;Make sure that your build settings generate the *.pdb* file. If the *.pdb* files are not updated when the project is built, then open the project properties, select the **Build** page, choose **Advanced**, and inspect **Debug Info**.
+
+For C++ projects, ensure that the generated .pdb files have full debug information. Open the project properties and verify that **Linker** > **Debugging** > **Generate Debug Info** is set to **Generate Debug Information optimized for sharing and publishing (/DEBUG:FULL)**.
 
 If the *.pdb* and *.dll* or *.exe* files are in different places, copy the *.pdb* file to the same directory. It is also possible to configure code coverage engine to search for *.pdb* files in another location. For more information, see [Customize code coverage analysis](../test/customizing-code-coverage-analysis.md).
 
@@ -91,11 +102,11 @@ Resolution&mdash;There are two possible types of faults:
 
 - **Regular expression error**
 
-     Each string in the file is a regular expression. Review each one for errors, and in particular look for:
+  Each string in the file is a regular expression. Review each one for errors, and in particular look for:
 
-    - Mismatched parentheses (...) or unescaped parentheses \\(...\\). If you want to match a parenthesis in the search string, you must escape it. For example, to match a function use: `.*MyFunction\(double\)`
+  - Mismatched parentheses (...) or unescaped parentheses \\(...\\). If you want to match a parenthesis in the search string, you must escape it. For example, to match a function use: `.*MyFunction\(double\)`
 
-    - Asterisk or plus at the start of an expression. To match any string of characters, use a dot followed by an asterisk: `.*`
+  - Asterisk or plus at the start of an expression. To match any string of characters, use a dot followed by an asterisk: `.*`
 
 ### Custom .runsettings file with incorrect exclusions
 

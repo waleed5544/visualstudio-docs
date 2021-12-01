@@ -1,11 +1,14 @@
 ---
 title: "How to: Export a Texture that has Premultiplied Alpha"
+description: Learn how the Image Content Pipeline generates premultiplied alpha textures from a source image that can be simpler to use and more robust.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
   - "multiple"
 ---
@@ -20,7 +23,7 @@ This document demonstrates these activities:
 - Configuring the Image Content Pipeline to generate premultiplied alpha.
 
 ## Premultiplied alpha
- Premultiplied alpha offers several advantages over conventional, non-premultiplied alpha, because it better represents the real-world interaction of light with physical materials by separating the texel's color contribution (the color that it adds to the scene) from its translucency (the amount of underlying color that it allows through). Some of the advantages of using premultiplied alpha are:
+Premultiplied alpha offers several advantages over conventional, non-premultiplied alpha, because it better represents the real-world interaction of light with physical materials by separating the texel's color contribution (the color that it adds to the scene) from its translucency (the amount of underlying color that it allows through). Some of the advantages of using premultiplied alpha are:
 
 - Blending with premultiplied alpha is an associative operation; the result of blending multiple translucent textures is the same, regardless of the order in which the textures are blended.
 

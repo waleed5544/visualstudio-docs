@@ -1,13 +1,16 @@
 ---
-title: "Evaluation Tools for Visual Studio | Microsoft Docs"
-ms.date: "11/04/2016"
-ms.topic: "conceptual"
+title: Evaluation Tools for Visual Studio | Microsoft Docs
+description: Use this checklist to evaluate user experience quality for visual and interaction details for new features you design for Visual Studio.
+ms.custom: SEO-VS-2020
+ms.date: 11/04/2016
+ms.topic: reference
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
-author: madskristensen
-ms.author: madsk
-manager: jillfra
+author: leslierichardson95
+ms.author: lerich
+manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
-  - "vssdk"
+- vssdk
 ---
 # Evaluation Tools for Visual Studio
 ## Craftsmanship checklist for Visual Studio
@@ -43,11 +46,11 @@ ms.workload:
 
 - Verify that buttons, commands, and command links that launch UI to capture user input end in an ellipsis **[...]**.
 
-     Examples:
+  Examples:
 
-    - An **[Advanced...]** button on a dialog.
+  - An **[Advanced...]** button on a dialog.
 
-    - The command options under the Tools menu (**Tools > Options**) should not get an ellipsis, because launching the dialog itself is the intent of the command.
+  - The command options under the Tools menu (**Tools > Options**) should not get an ellipsis, because launching the dialog itself is the intent of the command.
 
 - Verify that the UI contains no abbreviations, except for industry-standard terms. For instance, neither HTML nor TCP/IP need to be spelled out, though OOM (out of memory) and PII (personally identifiable information) should.
 
@@ -139,9 +142,9 @@ ms.workload:
 
 - If the field is a required field that must be identified as such, verify:
 
-    - that the background is set to `Environment.ControlEditRequiredBackground` and the foreground is set to `Environment.ControlEditRequiredHintText`
+  - that the background is set to `Environment.ControlEditRequiredBackground` and the foreground is set to `Environment.ControlEditRequiredHintText`
 
-    - that there is hint text within the control that appears as **"\<Required>"**
+  - that there is hint text within the control that appears as **"\<Required>"**
 
 #### Button controls
 
@@ -163,11 +166,11 @@ ms.workload:
 
 - Verify that the VS Colors used are:
 
-    - `Environment.ControlLinkText`
+  - `Environment.ControlLinkText`
 
-    - `Environment.ControlLinkTextHover`
+  - `Environment.ControlLinkTextHover`
 
-    - `Environment.ControlLinkTextPressed`
+  - `Environment.ControlLinkTextPressed`
 
 - Verify that hyperlinks appear blue with no underline unless embedded in a paragraph.
 

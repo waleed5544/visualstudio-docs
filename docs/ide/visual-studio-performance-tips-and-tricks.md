@@ -1,12 +1,15 @@
 ---
 title: Tips to improve performance
-ms.date: 08/14/2018
+description: Learn how to optimize certain Visual Studio features that you might not be using to help improve performance.
+ms.custom: SEO-VS-2020
+ms.date: 10/01/2021
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Visual Studio performance tips and tricks
 
@@ -20,6 +23,9 @@ Visual Studio performance recommendations are intended for low memory situations
 If you upgrade your system from a 32-bit version of Windows to a 64-bit version, you expand the amount of virtual memory available to Visual Studio from 2 GB to 4 GB. This enables Visual Studio to handle significantly larger workloads, even though it is 32-bit process.
 
 For more information, see [Memory limits](/windows/desktop/Memory/memory-limits-for-windows-releases) and [Use /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/).
+
+> [!TIP]
+> Visual Studio 2022 on Windows is now a 64-bit application. This means you can open, edit, run, and debug even the biggest and most complex solutions without running out of memory. To learn more, see both the [Visual Studio 2022 vision](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/) and [Visual Studio 2022 Preview 1](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/) blog posts.
 
 ## Disable automatic file restore
 
@@ -57,13 +63,13 @@ If you are typically running low on memory during debugging sessions, you can op
 
     Set the options to **Only specified modules** instead of **All modules** and then specify which modules you care to load. While debugging, you can also right-click specific modules in the **Modules** window to explicitly include a module in the symbol load. (To open the window while debugging, choose **Debug** > **Windows** > **Modules**.)
 
-    For more information, see [Understand symbol files](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/).
+    For more information, see [Understand symbol files](?view=vs-2019&preserve-view=true).
 
 - **Disable Diagnostic Tools**
 
     It is recommended that you disable CPU profiling after use. This feature can consume large amounts of resources. Once CPU profiling is enabled, this state is persisted across subsequent debug sessions, so it’s worth explicitly turning it off when done. You may save some resources by disabling the diagnostic tools while debugging if you do not need the provided features.
 
-    To disable the **Diagnostic Tools**, start a debugging session, choose **Tools** > **Options** > **Enable Diagnostic Tools**, and deselect the option.
+    To disable the **Diagnostic Tools**, start a debugging session, select **Tools** > **Options** > **Debugging** > **General**, and then deselect the **Enable Diagnostic Tools while debugging** option.
 
     For more information, see [Profiling Tools](../profiling/profiling-feature-tour.md).
 
@@ -76,7 +82,7 @@ Some tools or extensions can be turned off to improve performance.
 
 ### Managed language service (Roslyn)
 
-For information about .NET Compiler Platform ("Roslyn") performance considerations, see [Performance considerations for large solutions](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+For information about .NET Compiler Platform ("Roslyn") performance considerations, see [Performance considerations for large solutions](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md).
 
 - **Disable full solution analysis**
 
@@ -111,15 +117,33 @@ For information about .NET Compiler Platform ("Roslyn") performance consideratio
 
    ::: moniker-end
 
+- **Disable map mode**
+
+    [**Map mode**](how-to-track-your-code-by-customizing-the-scrollbar.md#display-modes) displays lines of code, in miniature, on the scroll bar. Map mode is enabled by default.
+
+    To disable map mode, go to **Tools** > **Options** > **Text Editor** > **All Languages** > **Scroll Bars**, and in the **Behavior** section, deselect the **Use map mode for vertical scroll bar** option.
+
+- **Disable word wrap**
+
+    [**Word wrap**](./reference/how-to-manage-word-wrap-in-the-editor.md) displays the portion of a long line of code that extends beyond the current width of the code editor window. Word wrap is on by default.
+
+    To disable word wrap for a project that you are currently working on, go to **Edit** > **Advanced** > **Word Wrap**. (You can toggle this setting by using the same menu commands.)
+
+    To disable word wrap for all projects, go to **Tools** > **Options** > **General** > **Text Editor** > **All Languages** > **General**, and in the **Settings** section, deselect the **Word wrap** option.
+
 - **Disable XAML Designer**
 
     The XAML designer is enabled by default, but only consumes resources if you open a *.xaml* file. If you work with XAML files but do not wish to use the designer functionality, disable this feature to free up some memory.
 
-    To disable **XAML Designer**, go to **Tools** > **Options** > **XAML Designer** > **Enable XAML Designer**, and deselect the option.
+    To disable XAML Designer, go to **Tools** > **Options** > **XAML Designer** > **Enable XAML Designer**, and deselect the option.
 
 - **Remove workloads**
 
     You can use the Visual Studio Installer to remove workloads that are no longer used. This action can streamline the startup and runtime cost by skipping packages and assemblies that aren’t needed anymore.
+
+- **Add untracked files to local .gitignore**
+
+    Visual Studio runs the Git command `git status` with untracked files to provide a seamless experience when you add new files to a repository. When there are a large number of untracked files, `git status` can consume extra memory. To ignore these files and improve performance of `git status`, you can add these files or folders to your local .gitignore file. To access the file, go to **Git** > **Settings** > **Git Repository Settings**. Then, in the **Git files** section, click **Add** to create a .gitignore file, or click **Edit** if you already have one.
 
 ## Force a garbage collection
 

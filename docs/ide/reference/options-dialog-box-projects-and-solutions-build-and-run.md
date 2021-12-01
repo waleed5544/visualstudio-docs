@@ -1,6 +1,9 @@
 ---
-title: Options Dialog Box, Projects and Solutions, Build and Run
+title: Options dialog, Projects and Solutions, Build and Run
+description: Specify the maximum number of C++ or C# projects that can build at the same time, certain default build behaviors, and some build log settings in Visual Studio.
+\ms.custom: SEO-VS-2020
 ms.date: 07/14/2017
+ms.technology: vs-ide-compile
 ms.topic: reference
 f1_keywords:
   - "VS.ToolsOptionsPages.Projects.Build_and_Run"
@@ -9,9 +12,9 @@ helpviewer_keywords:
   - "run actions"
   - "debugger, run options"
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
 ms.workload:
   - "multiple"
 ---

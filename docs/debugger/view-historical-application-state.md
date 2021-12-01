@@ -1,13 +1,14 @@
 ---
 title: "View previous app state using IntelliTrace"
 description: "Learn how to take snapshots, and view snapshots with IntelliTrace step-back"
-ms.custom: "seodec18"
+
 ms.date: 09/19/2018
 ms.topic: tutorial
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
   - "multiple"
 ---
@@ -105,16 +106,17 @@ The impact on overall stepping performance depends on your application. The over
   * Alternatively:
     1. Install the VC++ 2015.3 v140 toolset for desktop (x86, x64) component from the Visual Studio installer.
     2. Build the target application.
-    3. From the command line, use the editbin tool to set the `Largeaddressaware` flag for the target executable. For example, you might use this command (after updating the path): "C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe" /Largeaddressaware "C:\Path\To\Application\app.exe".
-    4. To start debugging, press **F5**. Now, snapshots are taken on debugger steps and breakpoints.
+    3. From the command line, use the editbin tool to set the `Largeaddressaware` flag for the target executable. For example, you might use this command (after updating the path):
+       "C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe" /Largeaddressaware "C:\Path\To\Application\app.exe".
+    1. To start debugging, press **F5**. Now, snapshots are taken on debugger steps and breakpoints.
 
        > [!Note]
        > The `Largeaddressaware` flag must be set each time that the executable is rebuilt with changes.
 
 * When a snapshot of the application's process is taken on an application that uses a persisted memory-mapped file, the process with the snapshot holds an exclusive lock on the memory-mapped file (even after the parent process has released its lock). Other processes are still able to read, but not write, to the memory-mapped file.
 
-    Workaround:
-    * Clear all snapshots by ending the debugging session.
+  Workaround:
+  * Clear all snapshots by ending the debugging session.
 
 * When debugging an application whose process has a high number of unique memory regions, such as an application that loads a large number of DLLs, stepping performance with snapshots enabled may be impacted. This issue will be addressed in a future version of Windows. If you are experiencing this issue, reach out to us at stepback@microsoft.com.
 

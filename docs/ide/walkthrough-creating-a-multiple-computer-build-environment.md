@@ -1,13 +1,16 @@
 ---
-title: "Walkthrough: Create a multiple-computer build environment"
+title: Create a multiple-computer build environment
+description: Create a build environment within your organization by installing Visual Studio on a host computer and then copying various files and settings to another computer.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
+ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
   - "MSBuild, building on multiple computers"
   - "build environment, MSBuild"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
 ms.workload:
   - "multiple"
 ---
@@ -41,7 +44,7 @@ Visual Studio with the **.NET desktop development** workload installed.
 
 ## Install software on the computers
 
-First, set up the host computer and then set up the build computer.
+First, set up the host computer, and then set up the build computer.
 
 By installing Visual Studio on the host computer, you create the files and settings that you will copy to the build computer later. You can install Visual Studio on an x86 or an x64 computer, but the architecture of the build computer must match the architecture of the host computer.
 
@@ -185,7 +188,7 @@ Notice that the name of the *Program Files* folder depends on the operating syst
 
 You must create registry entries to configure settings for MSBuild.
 
-1. Identify the parent folder for registry entries. All of the registry entries are created under the same parent key. On an x86 computer, the parent key is **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft**. On an x64 computer the parent key is **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft**. Irrespective of the system architecture, this walkthrough refers to the parent key as %RegistryRoot%.
+1. Identify the parent folder for registry entries. All of the registry entries are created under the same parent key. On an x86 computer, the parent key is **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft**. On an x64 computer, the parent key is **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft**. Irrespective of the system architecture, this walkthrough refers to the parent key as %RegistryRoot%.
 
     > [!NOTE]
     > If the architecture of your host computer differs from that of your build computer, make sure to use the appropriate parent key on each computer. This is especially important if you're automating the export process.

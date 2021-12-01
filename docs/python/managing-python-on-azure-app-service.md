@@ -2,11 +2,12 @@
 title: Configure Python on Azure App Service (Windows)
 description: How to install a Python interpreter and libraries on Azure App Service, and configuring web applications to properly refer to that interpreter.
 ms.date: 01/07/2019
-ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
-manager: jillfra
-ms.custom: seodec18
+ms.topic: how-to
+author: rjmolyneaux
+ms.author: rmolyneaux
+manager: jmartens
+ms.technology: vs-python
+
 ms.workload:
   - python
   - data-science
@@ -22,8 +23,10 @@ ms.workload:
 
 Customizable Python support for Azure App Service is provided as a set of App Service *site extensions* that each contain a specific version of the Python runtime. You can then install any desired packages directly into that environment, as described in this article. By customizing the environment in the App Service itself, you don't need to maintain packages in your web app projects or upload them with the app code.
 
+::: moniker range="<=vs-2017"
 > [!Tip]
 > Although App Service by default has Python 2.7 and Python 3.4 installed in root folders on the server, you cannot customize or install packages in these environments, nor should you depend on their presence. You should instead rely on a site extension that you control, as described in this article.
+::: moniker-end
 
 ## Choose a Python version through the Azure portal
 
@@ -41,7 +44,7 @@ Customizable Python support for Azure App Service is provided as a set of App Se
 
 ## Choose a Python version through the Azure Resource Manager
 
-If you are deploying an App Service with an Azure Resource Manager template, add the site extension as a resource. Specifically, the extension appears as a nested resource (a `resources` object under `resources`) with the type `siteextensions` and the name from [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22).
+If you are deploying an App Service with an Azure Resource Manager template, add the site extension as a resource. Specifically, the extension appears as a nested resource (a `resources` object under `resources`) with the type `siteextensions`.
 
 For example, after adding a reference to `python361x64` (Python 3.6.1 x64), your template may look like the following (some properties omitted):
 
@@ -206,4 +209,4 @@ Instead of using the Kudu console through the Azure portal, you can run commands
 
 For information about commands and authentication, see the [Kudu documentation](https://github.com/projectkudu/kudu/wiki/REST-API).
 
-You can also see credentials using the `az webapp deployment list-publishing-profiles` command through the Azure CLI (see [az webapp deployment](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles)). A helper library for posting Kudu commands is available on [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
+You can also see credentials using the `az webapp deployment list-publishing-profiles` command through the Azure CLI (see [az webapp deployment](/cli/azure/webapp/deployment?view=azure-cli-latest&preserve-view=true#az-webapp-deployment-list-publishing-profiles)). A helper library for posting Kudu commands is available on [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).

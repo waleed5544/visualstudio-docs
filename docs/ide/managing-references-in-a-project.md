@@ -1,26 +1,29 @@
 ---
 title: Manage references in a project
-ms.date: 04/11/2018
+description: Learn how to manage references to external components and connected services in a project.
+ms.custom: SEO-VS-2020
+ms.date: 10/26/2021
 ms.topic: conceptual
 f1_keywords:
-  - "vs.ProjectPropertiesReferencePaths"
-  - "cs.ProjectPropertiesReferencePaths"
+- vs.ProjectPropertiesReferencePaths
+- cs.ProjectPropertiesReferencePaths
 helpviewer_keywords:
-  - "C# projects, references"
-  - "referencing objects, project references"
-  - "external component references"
-  - "referencing namespaces"
-  - "Visual Basic projects, references"
-  - "referencing components, external components"
-  - "Web references, types of project references"
-  - "namespaces [Visual Studio], referencing"
-  - "COM components, referencing"
-  - "objects [Visual Studio], referencing"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+- C# projects, references
+- referencing objects, project references
+- external component references
+- referencing namespaces
+- Visual Basic projects, references
+- referencing components, external components
+- Web references, types of project references
+- namespaces [Visual Studio], referencing
+- COM components, referencing
+- objects [Visual Studio], referencing
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Manage references in a project
 
@@ -40,19 +43,21 @@ You can add a reference to the following types of components and services:
 
 - Other assemblies or class libraries of projects in the same solution
 
+- Shared projects
+
 - XML Web services
 
 ## UWP app references
 
 ### Project references
 
-Universal Windows Platform (UWP) projects can create references to other UWP projects in the solution, or to Windows 8.1 projects or binaries, provided that these projects do not use APIs that have been deprecated in Windows 10. For more information, see [Move from Windows Runtime 8 to UWP](/windows/uwp/porting/w8x-to-uwp-root).
+Universal Windows Platform (UWP) projects can create references to other UWP projects in the solution, or to Windows 8.1 projects or binaries, provided that these projects do not use APIs that have been deprecated in Windows 10 and later. For more information, see [Move from Windows Runtime 8 to UWP](/windows/uwp/porting/w8x-to-uwp-root).
 
-If you choose to retarget Windows 8.1 projects to Windows 10, see [Port, migrate, and upgrade Visual Studio projects](../porting/port-migrate-and-upgrade-visual-studio-projects.md).
+If you choose to retarget Windows 8.1 projects to Windows 10 and later, see [Port, migrate, and upgrade Visual Studio projects](../porting/port-migrate-and-upgrade-visual-studio-projects.md).
 
 ### Extension SDK references
 
-Visual Basic, C#, C++ and JavaScript Universal Windows Platform (UWP) apps can reference Extension SDKs that target Windows 8.1, as long as these Extension SDKs do not use APIs that have been deprecated in Windows 10. Please check the Extension SDK vendor site to find out whether it can be referenced by UWP apps.
+Visual Basic, C#, C++ and JavaScript Universal Windows Platform (UWP) apps can reference Extension SDKs that target Windows 8.1, as long as these Extension SDKs do not use APIs that have been deprecated in Windows 10 and later. Please check the Extension SDK vendor site to find out whether it can be referenced by UWP apps.
 
 If you determine that the Extension SDK being referenced by your app is not supported, then you need to perform the following steps:
 
@@ -64,7 +69,7 @@ If you determine that the Extension SDK being referenced by your app is not supp
     > One way to find out whether an Extension SDK has dependencies on other Extension SDKs is by looking in **Reference Manager**. Restart Visual Studio, create a new C# UWP app project, and then right-click on the project and choose **Add Reference**. Go to the **Windows** tab, then the **Extensions** sub-tab, and select the Extension SDK. Look at the right pane in the **Reference Manager**. If it has dependencies, they will be listed there.
 
     > [!IMPORTANT]
-    > If your project is targeting Windows 10, and the Extension SDK installed in the previous step has a dependency on the Microsoft Visual C++ Runtime Package, the version of Microsoft Visual C++ Runtime Package that is compatible with Windows 10 is v14.0, and is installed with Visual Studio.
+    > If your project is targeting Windows 10 specifically, and the Extension SDK installed in the previous step has a dependency on the Microsoft Visual C++ Runtime Package, the version of Microsoft Visual C++ Runtime Package that is compatible with Windows 10 is v14.0, and is installed with Visual Studio.
 
 1. If the Extension SDK you installed in the previous step has dependencies on other Extension SDKs, go to the sites of the vendors who own the dependencies, and install the versions of these dependencies that are compatible with the version of the platform your project is targeting.
 
@@ -101,18 +106,22 @@ You can create applications that reference projects or assemblies that target a 
 
 For more information, see [Framework targeting overview](../ide/visual-studio-multi-targeting-overview.md).
 
-## Project-to project references
+## Project-to-project references
 
-Project-to-project references are references to projects that contain assemblies; you create them by using the **Project** tab. Visual Studio can find an assembly when given a path to the project.
+Project-to-project references are references to projects that contain assemblies; you add project references by using the **Projects** tab of the Reference Manager dialog box. Visual Studio can find an assembly when given a path to the project.
 
 When you have a project that produces an assembly, you should reference the project and not use a file reference (see below). The advantage of a project-to-project reference is that it creates a dependency between the projects in the build system. The dependent project will be built if it has changed since the last time the referencing project was built. A file reference does not create a build dependency, so it is possible to build the referencing project without building the dependent project, and the reference can become obsolete. (That is, the project can reference a previously built version of the project.) This can result in several versions of a single DLL being required in the *bin* directory, which is not possible. When this conflict occurs, you will see a message such as "Warning: the dependency 'file' in project 'project' cannot be copied to the run directory because it would overwrite the reference 'file.'". For more information, see [Troubleshoot broken references](../ide/troubleshooting-broken-references.md) and [How to: Create and remove project dependencies](../ide/how-to-create-and-remove-project-dependencies.md).
 
 > [!NOTE]
 > A file reference instead of a project-to-project reference is created if the target version of the .NET Framework of one project is version 4.5, and the target version of the other project is version 2, 3, 3.5, or 4.0.
 
+## Shared project references
+
+Unlike most other project types, a *shared project* does not have any binary output. Instead, the code is compiled into each project that references it. [Shared Projects](/xamarin/cross-platform/app-fundamentals/shared-projects?tabs=windows) let you write common code that's referenced by a number of different application projects. The code is compiled as part of each referencing project and can include compiler directives to help incorporate platform-specific functionality into the shared code base. Add a reference to a shared project on the **Shared Projects** tab of the Reference Manager dialog box.
+
 ## File references
 
-File references are direct references to assemblies outside the context of a Visual Studio project. You create them by using the **Browse** tab of the **Reference Manager**. Use a file reference when you just have an assembly or component, and not the project that creates it as output.
+File references are direct references to assemblies outside the context of a Visual Studio project. You create them by using the **Browse** tab of the Reference Manager dialog box. Use a file reference when you just have an assembly or component, and not the project that creates it as output.
 
 ## See also
 

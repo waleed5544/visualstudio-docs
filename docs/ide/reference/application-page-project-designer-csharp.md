@@ -1,18 +1,21 @@
 ---
 title: Application page of C# project properties
-ms.date: 10/30/2018
+description: Learn how to use the Application page of the C# Project Designer to specify the project's application settings and properties.
+ms.custom: SEO-VS-2020
+ms.date: 11/12/2021
 ms.topic: reference
 f1_keywords:
-  - "cs.ProjectPropertiesApplicationWPF"
-  - "cs.ProjectPropertiesApplication"
+- cs.ProjectPropertiesApplicationWPF
+- cs.ProjectPropertiesApplication
 helpviewer_keywords:
-  - "Project Designer, Application page"
-  - "Application page in Project Designer"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+- Project Designer, Application page
+- Application page in Project Designer
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "dotnet"
+- dotnet
 ---
 # Application Page, Project Designer (C#)
 
@@ -48,9 +51,19 @@ Specifies the version of .NET that the application targets. This option can have
 
 For .NET Framework projects, the default value matches the target framework that you specified when you created the project.
 
-For a project that targets .NET Core, the available versions may appear as follows:
+For a project that targets .NET Core, the available versions might appear as follows:
+
+::: moniker range="vs-2022"
+
+:::image type="content" source="../media/vs-2022/application-target-framework.png" alt-text="Screenshot of the target framework versions for a .NET Core project in Visual Studio 2022.":::
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
 
 ![Target framework versions for a .NET Core project](../media/application-target-framework.png)
+
+::: moniker-end
 
 > [!NOTE]
 > The prerequisite packages listed in the [Prerequisites Dialog Box](../../ide/reference/prerequisites-dialog-box.md) are set automatically the first time that you open the dialog box. If you subsequently change the project's target framework, you must select the prerequisites manually to match the new target framework.
@@ -91,13 +104,15 @@ The **Resources** options help you configure resource settings for your app.
 
 **Icon and manifest**
 
-By default, this radio button is selected and the **Icon** and **Manifest** options are enabled. This enables you to select your own icon, or to select different manifest generation options. Leave this radio button selected unless you're providing a resource file for the project.
+By default, this radio button is selected and the **Icon** and **Manifest** options are enabled. This enables you to select your own icon or to select different manifest generation options. Leave this radio button selected unless you're providing a resource file for the project.
 
 **Icon**
 
 Sets the *.ico* file that you want to use as your program icon. Click **Browse** to browse for an existing graphic, or type the name of the file that you want. See [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) for more information.
 
 To access this property programmatically, see <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.
+
+For information about creating an icon, see [Image editor for icons](/cpp/windows/image-editor-for-icons).
 
 **Manifest**
 
@@ -114,3 +129,9 @@ Selects a manifest generation option when the application runs on Windows Vista 
 Select this radio button when you're providing a resource file for the project. Selecting this option disables the **Icon** and **Manifest** options.
 
 Enter a path name or use the Browse button (**...**) to add a Win32 resource file to the project.
+
+For more information, see [Create resource files for .NET apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+
+## See also
+
+[Revamped Project Properties UI](https://devblogs.microsoft.com/visualstudio/revamped-project-properties-ui/)

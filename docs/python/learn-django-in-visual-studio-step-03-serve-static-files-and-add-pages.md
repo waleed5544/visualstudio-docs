@@ -4,16 +4,17 @@ titleSuffix: ""
 description: A walkthrough of Django basics in the context of Visual Studio projects, specifically demonstrating how to serve static files, add pages to the app, and use template inheritance
 ms.date: 11/19/2018
 ms.topic: tutorial
-author: JoshuaPartlow
-ms.author: joshuapa
-manager: jillfra
-ms.custom: seodec18
+author: rjmolyneaux
+ms.author: rmolyneaux
+manager: jmartens
+ms.technology: vs-python
+
 ms.workload:
   - python
   - data-science
 ---
 
-# Step 3: Serve static files, add pages, and use template inheritance
+# Step 3: Serve static files, add pages, and use template inheritance with Django app
 
 **Previous step: [Create a Django app with views and page templates](learn-django-in-visual-studio-step-02-create-an-app.md)**
 
@@ -97,6 +98,22 @@ Answer: The `{% load staticfiles %}` line is required before referring to static
 ### Question: Are there any conventions for organizing static files?
 
 Answer: You can add other CSS, JavaScript, and HTML files in your *static* folder however you want. A typical way to organize static files is to create subfolders named *fonts*, *scripts*, and *content* (for stylesheets and any other files). In each case, remember to include those folders in the relative path to the file in `{% static %}` references.
+
+### Question: Can I complete the same task without using the {% load staticfiles %} tag?
+
+Answer: Yes, you can.
+
+```html
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" type="text/css" href="../../static/site.css" />
+    </head>
+    <body>
+        <span class="message">{{ message }}</span>{{ content }}
+    </body>
+</html>
+```
 
 ## Step 3-3: Add a page to the app
 

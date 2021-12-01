@@ -1,11 +1,14 @@
 ---
-title: Export a Texture for Direct2D and JavaScript applications
+title: Export a texture for Direct2D and JavaScript apps
+description: The Image Content Pipeline generates textures compatible with Direct2D internal rendering for use in Direct2D apps and UWP apps created with JavaScript.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 241c25fe-764e-4e1b-ad32-b1377dcbb605
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
   - "multiple"
 ---
@@ -19,11 +22,11 @@ This document demonstrates these activities:
 
 - Configuring the Image Content Pipeline to generate a texture that you can use in a Direct2D or JavaScript app.
 
-    - Generate a block-compressed *.dds* file.
+  - Generate a block-compressed *.dds* file.
 
-    - Generate premultiplied alpha.
+  - Generate premultiplied alpha.
 
-    - Disable mipmap generation.
+  - Disable mipmap generation.
 
 ## Rendering conventions in Direct2D
 
@@ -33,11 +36,11 @@ Textures that are used in the context of Direct2D must conform to these Direct2D
 
 - The texture must be supplied in *.dds* format, by using one of these block-compression formats:
 
-   - BC1_UNORM compression
+  - BC1_UNORM compression
 
-   - BC2_UNORM compression
+  - BC2_UNORM compression
 
-   - BC3_UNORM compression
+  - BC3_UNORM compression
 
 - Mipmaps are not supported.
 

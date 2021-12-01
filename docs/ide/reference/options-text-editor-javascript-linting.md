@@ -1,26 +1,28 @@
 ---
 title: Options, Text Editor, JavaScript, Linting
+description: Learn how to use the Linting page of the Options dialog box to set options for analyzing code in the Code Editor.
+ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
-ms.technology: vs-ide-general
+ms.technology: vs-javascript
 ms.topic: reference
 f1_keywords:
   - "VS.ToolsOptionsPages.Text_Editor.JavaScript.Linting.General"
   - "VS.ToolsOptionsPages.Text_Editor.JavaScript.Linting"
   - "VS.ToolsOptionsPages.Text_Editor.TypeScript.Linting.General"
   - "VS.ToolsOptionsPages.Text_Editor.TypeScript.Linting"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: mikejo5000
+ms.author: mikejo
+manager: jmartens
 ms.workload:
   - "multiple"
 ---
-# Options, Text Editor, JavaScript, Linting
+# Options dialog box: Text Editor \> JavaScript/TypeScript \> Linting
 
-Use the **Linting** page of the **Options** dialog box to set options for analyzing code in the Code Editor. To access this page, on the menu bar, choose **Tools** > **Options**, and then expand **Text Editor** > **JavaScript** > **Linting**.
+Use the **Linting** page of the **Options** dialog box to set options for analyzing code in the Code Editor. To access this page, on the menu bar, choose **Tools** > **Options**, and then expand **Text Editor** > **JavaScript/TypeScript** > **Linting**.
 
 ## ESLint Settings
 
-These options let you enable static JavaScript code analysis and choose which files are analyzed. For more information about ESLint, see [ESLint.org](https://eslint.org/).
+These options let you enable static JavaScript and TypeSCript code analysis, and choose which files are analyzed. For more information about ESLint, see [ESLint.org](https://eslint.org/).
 
 ### UIElement list
 

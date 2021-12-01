@@ -1,5 +1,7 @@
 ---
 title: "Blocking Time Profile Report | Microsoft Docs"
+description: "The blocking time profile reports provide aggregate blocking time data. There are six report types: Synchronization, Sleep, I/O, Memory, Preemption, and UI."
+ms.custom: SEO-VS-2020
 ms.date: "11/04/2016"
 ms.topic: "conceptual"
 f1_keywords:
@@ -9,7 +11,8 @@ helpviewer_keywords:
 ms.assetid: 3bc45af0-3ba6-4fa3-a336-be8e9ae95107
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
   - "multiple"
 ---
@@ -35,7 +38,7 @@ The Profile Reports provide aggregate blocking time data for call stacks that ar
 |**Details**|Fully qualified name of the function. This includes line count when it's available.|
 
 ### Synchronization
- The Synchronization report shows the calls that are responsible for segments that are blocking on synchronization, and the aggregate blocking times of each call stack. For more information, see [Synchronization time](../profiling/synchronization-time.md)
+ The Synchronization report shows the calls that are responsible for segments that are blocking on synchronization, and the aggregate blocking times of each call stack. For more information, see [Synchronization time](../profiling/synchronization-time.md).
 
 ### Sleep
  The Sleep report shows the calls that are responsible for blocking time that was attributed to time that was spent sleeping, and the aggregate blocking times of each call stack. For more information, see [Sleep time](../profiling/sleep-time.md).

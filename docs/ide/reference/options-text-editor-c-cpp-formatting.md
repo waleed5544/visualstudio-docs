@@ -1,21 +1,23 @@
 ---
 title: Options, Text Editor, C/C++, Formatting
-ms.date: 04/30/2018
+description: Learn how to use the Formatting options page and its subpages to set options for formatting code in the code editor when you are programming in C and C++.
+ms.custom: SEO-VS-2020
+ms.date: 10/08/2021
 ms.topic: reference
 f1_keywords:
-  - "VS.ToolsOptionsPages.Text_Editor.C/C++.Formatting.General"
-  - "VS.ToolsOptionsPages.Text_Editor.C%2fC%2b%2b.Formatting.General"
+- VS.ToolsOptionsPages.Text_Editor.C/C++.Formatting.General
+- VS.ToolsOptionsPages.Text_Editor.C%2fC%2b%2b.Formatting.General
 dev_langs:
-  - "CPP"
+- CPP
 helpviewer_keywords:
-  - "Text Editor Options dialog box, formatting"
-  - "ClangFormat"
+- Text Editor Options dialog box, formatting
+- ClangFormat
 ms.assetid: cb6f1cbb-5305-48da-a8e8-33fd70775d46
-author: mikeblome
-ms.author: mblome
-manager: wpickett
+author: TerryGLee
+ms.author: tglee
+manager: markl
 ms.workload:
-  - "cplusplus"
+- cplusplus
 ---
 # Options, Text Editor, C/C++, Formatting
 
@@ -48,11 +50,11 @@ The page also has options for configuring support for [ClangFormat](https://clan
 
 ::: moniker-end
 
-ClangFormat support is enabled by default. You can choose which of these common formating conventions to apply to all your projects: LLVM, Google, Chromium, Mozilla, or WebKit. You can also create a custom format definition .clang-format or _clang-format file. If such a file is present in a project folder, Visual Studio uses it to format all source code files in that folder and its subfolders.
+ClangFormat support is enabled by default. You can choose which of these common formatting conventions to apply to all your projects: LLVM, Google, Chromium, Mozilla, or WebKit. You can also create a custom format definition .clang-format or _clang-format file. If such a file is present in a project folder, Visual Studio uses it to format all source code files in that folder and its subfolders.
 
 By default, Visual Studio runs clangformat.exe in the background applies formatting as you type. You can also specify to run it only for manually invoked formatting commands **Format Document (Ctrl+K, Ctrl+D)** or **Format Selection (Ctrl + K, Ctrl + F)**.
 
-## Indentation, New Lines, Spacing Wrapping pages
+## Indentation, New Lines, Spacing, Wrapping pages
 
 These pages enable various formatting customizations but are ignored if ClangFormat is enabled.
 

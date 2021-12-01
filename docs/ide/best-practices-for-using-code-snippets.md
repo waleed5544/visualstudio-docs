@@ -1,15 +1,18 @@
 ---
 title: Best Practices for Using Code Snippets
+description: Learn about code snippets, what the intent of a code snippet is, and how best to use them to suit your application. 
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
-  - "code snippets, best practices"
-  - "code snippets, security"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+- code snippets, best practices
+- code snippets, security
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Best practices for using code snippets
 
@@ -55,11 +58,11 @@ IntelliSense code snippets installed by Visual Studio are not in themselves a se
 
 - Open all downloaded snippet files in Notepad or the XML editor of Visual Studio and review them carefully before installing them. Look for the following issues:
 
-    - The snippet code could damage your system if you execute it. Read the source code carefully before running it.
+  - The snippet code could damage your system if you execute it. Read the source code carefully before running it.
 
-    - The Help URL block of the snippet file can contain URLs that execute a malicious script file or display an offensive website.
+  - The Help URL block of the snippet file can contain URLs that execute a malicious script file or display an offensive website.
 
-    - The snippet may contain references that are added silently to your project and may be loaded from anywhere on your system. These references may have been downloaded to your computer from where you downloaded the snippet. The snippet may then make a call to a method in the reference that executes malicious code. To protect yourself against such an attack, review the Imports and References blocks of the snippet file.
+  - The snippet may contain references that are added silently to your project and may be loaded from anywhere on your system. These references may have been downloaded to your computer from where you downloaded the snippet. The snippet may then make a call to a method in the reference that executes malicious code. To protect yourself against such an attack, review the Imports and References blocks of the snippet file.
 
 ## See also
 

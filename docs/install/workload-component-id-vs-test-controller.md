@@ -1,20 +1,21 @@
 ---
 title: Visual Studio Test Controller workload and component IDs
-titleSuffix: ""
-description: "Use Visual Studio workload and component IDs to distribute automated tests to multiple machines"
+titleSuffix: ''
+description: Use Visual Studio workload and component IDs to distribute automated tests to multiple machines
 keywords:
-author: TerryGLee
-ms.author: tglee
-manager: jillfra
-ms.date: 05/22/2019
+author: anandmeg
+ms.author: meghaanand
+manager: jmartens
+ms.date: 10/12/2021
 ms.topic: reference
 helpviewer_keywords:
-  - "workload ID, Visual Studio"
-  - "component ID, Visual Studio"
-  - "install Visual Studio, administrator guide"
+- workload ID, Visual Studio
+- component ID, Visual Studio
+- install Visual Studio, administrator guide
 ms.assetid: fbbda9c8-d2c6-474d-b52d-a95227d52fe7
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
+open_to_public_contributors: false
 ---
 # Visual Studio Test Controller component directory
 
@@ -28,11 +29,19 @@ ms.technology: vs-installation
 
 ::: moniker-end
 
-::: moniker range=">= vs-2019"
+::: moniker range="vs-2019"
 
 [!INCLUDE[workloads-components-header-2019_md](includes/workloads-components-header-2019_md.md)]
 
 [!include[Visual Studio Test Controller 2019](includes/vs-2019/workload-component-id-vs-test-controller.md)]
+
+::: moniker-end
+
+::: moniker range=">= vs-2022"
+
+[!INCLUDE[workloads-components-header-2022_md](includes/workloads-components-header-2022.md)]
+
+[!include[Visual Studio Test Controller 2022](includes/vs-2022/workload-component-id-vs-test-controller.md)]
 
 ::: moniker-end
 

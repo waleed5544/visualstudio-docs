@@ -1,25 +1,28 @@
 ---
 title: Read XML data into a dataset
+description: Read XML data into a dataset. In this walkthrough, you create a Windows application that loads XML data into a dataset.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
-  - "VB"
-  - "CSharp"
+- VB
+- CSharp
 helpviewer_keywords:
-  - "reading XML"
-  - "data access [Visual Studio], XML data"
-  - "reading files, XML"
-  - "data [Visual Studio], reading from XML files"
-  - "reading data, XML files"
-  - "XML [Visual Studio], reading"
-  - "XML documents, reading"
-  - "datasets [Visual Basic], reading XML data"
+- reading XML
+- data access [Visual Studio], XML data
+- reading files, XML
+- data [Visual Studio], reading from XML files
+- reading data, XML files
+- XML [Visual Studio], reading
+- XML documents, reading
+- datasets [Visual Basic], reading XML data
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
-  - "data-storage"
+- data-storage
 ---
 # Read XML data into a dataset
 
@@ -113,9 +116,9 @@ The user interface for this application consists of the following:
 
 - Two <xref:System.Windows.Forms.Button> controls.
 
-    - One button reads the XML file into the dataset and displays it in the <xref:System.Windows.Forms.DataGridView> control.
+  - One button reads the XML file into the dataset and displays it in the <xref:System.Windows.Forms.DataGridView> control.
 
-    - A second button extracts the schema from the dataset, and through a <xref:System.IO.StringWriter> displays it in the <xref:System.Windows.Forms.TextBox> control.
+  - A second button extracts the schema from the dataset, and through a <xref:System.IO.StringWriter> displays it in the <xref:System.Windows.Forms.TextBox> control.
 
 ### To add controls to the form
 
@@ -166,8 +169,8 @@ The **Read XML** button reads the XML file into the dataset. It then sets proper
 
 3. Type the following code into the `ReadXmlButton_Click` event handler:
 
-     [!code-csharp[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_1.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/CS/Form1.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb" id="Snippet2":::
 
 4. In the `ReadXMLButton_Click` event handler code, change the `filepath =` entry to the correct path.
 
@@ -183,8 +186,8 @@ The **Show Schema** button creates a <xref:System.IO.StringWriter> object that's
 
 3. Paste the following code into the `ShowSchemaButton_Click` event handler.
 
-     [!code-csharp[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_2.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/CS/Form1.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataFillingAndExecuting/VB/Form1.vb" id="Snippet3":::
 
 ## Test the form
 

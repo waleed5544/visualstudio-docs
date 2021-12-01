@@ -1,39 +1,42 @@
 ---
 title: Customize menus and toolbars
-ms.date: 11/04/2016
-ms.topic: conceptual
+description: Learn how to customize Visual Studio menus and toolbars, and also learn how to customize any commands included in the menus and toolbars.
+ms.custom: SEO-VS-2020
+ms.date: 11/24/2021
+ms.topic: how-to
 f1_keywords:
-  - "vs.renametoolbar"
-  - "vs.customize.toolbars"
-  - "vs.buttoneditor"
-  - "vs.customize.commands"
-  - "vs.newtoolbar"
+- vs.renametoolbar
+- vs.customize.toolbars
+- vs.buttoneditor
+- vs.customize.commands
+- vs.newtoolbar
 helpviewer_keywords:
-  - "captions, customizing toolbar"
-  - "custom toolbars [Visual Studio]"
-  - "command buttons, customizing toolbar"
-  - "labels, customizing toolbar"
-  - "images [Visual Studio], toolbar buttons"
-  - "buttons [Visual Studio], custom toolbars"
-  - "toolbars [Visual Studio], creating in the IDE"
-  - "icons [Visual Studio], customizing toolbar"
-  - "commands [Visual Studio], customizing environment"
-  - "customizing toolbars"
-  - "toolbars [Visual Studio], customizing"
-  - "toolbars [Visual Studio], customizing in the IDE"
+- captions, customizing toolbar
+- custom toolbars [Visual Studio]
+- command buttons, customizing toolbar
+- labels, customizing toolbar
+- images [Visual Studio], toolbar buttons
+- buttons [Visual Studio], custom toolbars
+- toolbars [Visual Studio], creating in the IDE
+- icons [Visual Studio], customizing toolbar
+- commands [Visual Studio], customizing environment
+- customizing toolbars
+- toolbars [Visual Studio], customizing
+- toolbars [Visual Studio], customizing in the IDE
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # How to: Customize menus and toolbars in Visual Studio
 
 You can customize Visual Studio not only by adding and removing toolbars and menus on the menu bar, but also by adding and removing commands on any given toolbar or menu.
 
-> [!WARNING]
-> After you customize a toolbar or menu, make sure that its check box remains selected in the **Customize** dialog box. Otherwise, your changes won't persist after you close and reopen Visual Studio.
+> [!TIP]
+> To learn more about how to personalize the toolbar so that you can make it yours, see our recent blog post, [**Optimizing toolbars for your workflow**](https://devblogs.microsoft.com/visualstudio/optimizing-toolbars-for-your-workflow/).
 
 ## Add, remove, or move a menu on the menu bar
 
@@ -45,7 +48,9 @@ You can customize Visual Studio not only by adding and removing toolbars and men
 
     - To add a menu, choose the **Add New Menu** button, choose the **Modify Selection** button, and then name the menu that you want to add.
 
+        ::: moniker range="vs-2017"
         ![Customize dialog box showing how to add a menu](../ide/media/addmenu.png)
+        ::: moniker-end
 
     - To remove a menu, choose it in the **Controls** list, and then choose the **Delete** button.
 
@@ -61,7 +66,9 @@ You can customize Visual Studio not only by adding and removing toolbars and men
 
     - To add a toolbar, choose the **New** button, specify a name for the toolbar that you want to add, and then choose the **OK** button.
 
+        ::: moniker range="vs-2017"
         ![Customize dialog box showing how to add a toolbar](../ide/media/addtoolbar.png)
+        ::: moniker-end
 
     - To remove a custom toolbar, choose it in the **Toolbars** list, and then choose the **Delete** button.
 
@@ -77,6 +84,9 @@ You can customize Visual Studio not only by adding and removing toolbars and men
 
 ## <a name="customizing_menu">Customize a menu or a toolbar</a>
 
+> [!WARNING]
+> After you customize a toolbar or menu, make sure that its check box remains selected in the **Customize** dialog box. Otherwise, your changes won't persist after you close and reopen Visual Studio.
+
 1. On the menu bar, choose **Tools** > **Customize**.
 
     The **Customize** dialog box opens.
@@ -89,7 +99,9 @@ You can customize Visual Studio not only by adding and removing toolbars and men
 
         In the **Add Command** dialog box, choose an item in the **Categories** list, choose an item in the **Commands** list, and then choose the **OK** button.
 
+        ::: moniker range="vs-2017"
         ![Add Command dialog box in Visual Studio](../ide/media/addcommand.png)
+        ::: moniker-end
 
     - To delete a command, choose it in the **Controls** list, and then choose the **Delete** button.
 

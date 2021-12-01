@@ -1,5 +1,7 @@
 ---
 title: File nesting rules for Solution Explorer
+description: Learn about Solution Explorer file nesting rules, presets, and customization.
+ms.custom: SEO-VS-2020
 ms.date: 05/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,7 +9,8 @@ helpviewer_keywords:
  - "Solution Explorer, file nesting"
 author: angelosp
 ms.author: angelpe
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-general
 ---
 # File nesting in Solution Explorer
 
@@ -104,7 +107,8 @@ Consider the following example:
 > [!NOTE]
 > - If you don't specify any specific file extensions for the `pathSegment` rule, it applies to all file extensions. That is, any file with the same name and extension as another file plus an additional extension in the middle is nested under the other file.
 > - You can limit the effect of the `pathSegment` rule to specific file extensions by specifying them in the following way:
->    ```
+>
+>    ```json
 >    "pathSegment": {
 >       "add": {
 >         ".*": [

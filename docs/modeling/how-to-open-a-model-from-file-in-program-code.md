@@ -1,12 +1,15 @@
 ---
-title: "How to: Open a Model from File in Program Code"
+title: 'How to: Open a Model from File in Program Code'
+description: Learn that the ModelBus provides standard mechanism for referencing a model or elements in a model, and for finding the model if it has moved. 
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+ms.topic: how-to
+author: mgoertz-msft
+ms.author: mgoertz
+manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # How to: Open a Model from File in Program Code
 
@@ -33,7 +36,7 @@ Add these references to your Visual Studio application project:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-    - If you do not see this under the **.NET** tab in the **Add References** dialog box, click the **Browse** tab and navigate to `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
+  - If you do not see this under the **.NET** tab in the **Add References** dialog box, click the **Browse** tab and navigate to `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
 
 - Your DSL assembly, which you will find under the bin folder your DSL project. Its name is typically of the form: *YourCompany*.*YourProject*`.Dsl.dll`.
 

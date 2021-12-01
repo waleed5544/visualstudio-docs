@@ -1,24 +1,28 @@
 ---
-title: "MSBuild Toolset (ToolsVersion) | Microsoft Docs"
-ms.date: "01/31/2018"
-ms.topic: "conceptual"
+title: MSBuild Toolset (ToolsVersion) | Microsoft Docs
+description: Learn how to use the ToolsVersion attribute in the MSBuild project file to specify a toolset of tasks, targets, and tools to build an application.
+ms.custom: SEO-VS-2020
+ms.date: 01/31/2018
+ms.topic: conceptual
 helpviewer_keywords:
-  - "MSBuild, multitargeting"
-  - "targeting a specific .NET framework [MSBuild]"
-  - "MSBuild, targeting a specific .NET framework"
-  - "multitargeting [MSBuild]"
+- MSBuild, multitargeting
+- targeting a specific .NET framework [MSBuild]
+- MSBuild, targeting a specific .NET framework
+- multitargeting [MSBuild]
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
-author: mikejo5000
-ms.author: mikejo
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: msbuild
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # MSBuild Toolset (ToolsVersion)
 
-MSBuild uses a Toolset of tasks, targets, and tools to build an application. Typically, a MSBuild Toolset includes a *microsoft.common.tasks* file, a *microsoft.common.targets* file, and compilers such as *csc.exe* and *vbc.exe*. Most Toolsets can be used to compile applications to more than one version of the .NET Framework and more than one system platform. However, the MSBuild 2.0 Toolset can be used to target only the .NET Framework 2.0.
+MSBuild uses a Toolset of tasks, targets, and tools to build an application. Typically, an MSBuild Toolset includes a *microsoft.common.tasks* file, a *microsoft.common.targets* file, and compilers such as *csc.exe* and *vbc.exe*. Most Toolsets can be used to compile applications to more than one version of the .NET Framework and more than one system platform. However, the MSBuild 2.0 Toolset can be used to target only the .NET Framework 2.0.
 
 ## ToolsVersion attribute
+
 ::: moniker range=">=vs-2019"
  Specify the Toolset in the `ToolsVersion` attribute on the [Project](../msbuild/project-element-msbuild.md) element in the project file. The following example specifies that the project should be built by using the MSBuild "Current" Toolset.
 
@@ -38,7 +42,7 @@ MSBuild uses a Toolset of tasks, targets, and tools to build an application. Typ
 ::: moniker-end
 
 > [!NOTE]
-> Some project types use the `sdk` attribute instead of `ToolsVersion`. For more information, see [Packages, metadata, and frameworks](/dotnet/core/packages) and [Additions to the csproj format for .NET Core](/dotnet/core/tools/csproj).
+> Some project types use the `sdk` attribute instead of `ToolsVersion`. For more information, see [Additions to the csproj format for .NET Core](/dotnet/core/tools/csproj).
 
 ## How the ToolsVersion attribute works
 
@@ -54,7 +58,7 @@ MSBuild uses a Toolset of tasks, targets, and tools to build an application. Typ
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 ```
 
- You can modify the value of `MSBuildToolsPath` by defining a custom Toolset. For more information, see [Standard and custom Toolset configurations](../msbuild/standard-and-custom-toolset-configurations.md)
+ You can modify the value of `MSBuildToolsPath` by defining a custom Toolset. For more information, see [Standard and custom Toolset configurations](../msbuild/standard-and-custom-toolset-configurations.md).
 
  When you build a solution on the command line and specify a `ToolsVersion` for *msbuild.exe*, all projects and their project-to-project dependencies are built according to that `ToolsVersion`, even if each project in the solution specifies its own `ToolsVersion`. To define the `ToolsVersion` value on a per project basis, see [Overriding ToolsVersion settings](../msbuild/overriding-toolsversion-settings.md).
 
@@ -100,7 +104,7 @@ Alternately, you can determine the Toolset programmatically by calling the metho
 
 - <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile%2A> returns the path of a file, which is typically located in the managed tools folder.
 
-- <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToBuildTools%2A> returns the path of the build tools.
+- [GetPathToBuildTools](/previous-versions/visualstudio/visual-studio-2013/dn251121(v=vs.121)) returns the path of the build tools.
 
 ### Sub-toolsets
 

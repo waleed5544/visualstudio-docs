@@ -1,15 +1,18 @@
 ---
-title: "How to: Pause and Resume Performance Data Collection | Microsoft Docs"
-ms.date: "11/04/2016"
-ms.topic: "conceptual"
-helpviewer_keywords:
-  - "profiling tools, remote profiling"
+title: Pause and Resume Performance Data Collection | Microsoft Docs
+description: Learn how you can control the collection of profiling data interactively from the profiling session page window.
+ms.date: 11/04/2016
+ms.topic: how-to
+helpviewer_keywords: 
+  - profiling tools, remote profiling
 ms.assetid: b8e76363-65cd-424d-8173-3e2b5f54203b
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: jillfra
-ms.workload:
-  - "multiple"
+author: mikejo5000
+ms.author: mikejo
+manager: jmartens
+ms.technology: vs-ide-debug
+monikerRange: 'vs-2017'
+ms.workload: 
+  - multiple
 ---
 # How to: Pause and resume performance data collection
 From the profiling session page window, you can control the collection of profiling data interactively.
@@ -25,11 +28,11 @@ From the profiling session page window, you can control the collection of profil
 
 - On the profiling session page:
 
-    - Choose **Pause Collection** to suspend data collection.
+  - Choose **Pause Collection** to suspend data collection.
 
-    - Choose **Resume Collection** to restart data collection after it has been paused.
+  - Choose **Resume Collection** to restart data collection after it has been paused.
 
-    - Choose **Stop profiling** to end the profiling session and generate reports.
+  - Choose **Stop profiling** to end the profiling session and generate reports.
 
 ## See also
 - [Control data collection](../profiling/controlling-data-collection.md)

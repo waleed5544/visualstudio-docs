@@ -1,21 +1,21 @@
 ---
 title: "Uninstall Visual Studio for Mac"
 description: "Instructions for uninstalling Visual Studio for Mac and related tools."
-author: conceptdev
-ms.author: crdun
-ms.date: 05/06/2018
+author: heiligerdankgesang
+ms.author: dominicn
+ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
+ms.topic: how-to
 ---
 
 # Uninstalling Visual Studio for Mac
 
 You can use this guide to uninstall each component in Visual Studio for Mac individually by navigating to the relevant section, or you can use the scripts provided in the [Uninstall Script](#uninstall-script) section to uninstall everything.
 
-If you have previously had Xamarin Studio installed on your machine, you may also need to follow the instructions in [Xamarin's uninstall](/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac) guide, in addition to the following steps.
-
 > [!NOTE]
-> This information will only remove Visual Studio 2019 or 2017 for Mac from your machine. to uninstall Visual Studio Code, see [this issue](https://github.com/Microsoft/vscode/issues/52151) for details.
+> We'd like to learn more about why you're uninstalling Visual Studio for Mac so we can make it better. If you have a few minutes, [please share your feedback](https://aka.ms/vs/mac/uninstallsurvey). Thank you!
+
 
 ## Uninstall Script
 
@@ -52,7 +52,7 @@ To run the script, do the following steps:
     sudo ./uninstall-vsmac.sh
     ```
 
-4. Finally, delete the uninstall script.
+4. Finally, delete the uninstall script and remove Visual Studio for Mac from the dock (if it's there).
 
 ### .NET Core script
 
@@ -218,6 +218,8 @@ rm -rf ~/Library/Preferences/Xamarin/
 rm -rf "~/Library/Preferences/Visual Studio/"
 ```
 
+* * *
+
 ## Uninstall Visual Studio 2019 for Mac Preview
 
 Visual Studio 2019 for Mac Preview was launched as a separate preview, allowing you to continue to work with your Visual Studio 2017 for Mac install side-by-side.
@@ -237,3 +239,4 @@ rm -rf ~/Library/Preferences/com.microsoft.visual-studio-preview.plist
 ## See also
 
 - [Uninstall Visual Studio (on Windows)](/visualstudio/install/uninstall-visual-studio)
+- [Uninstall Visual Studio Code](https://github.com/Microsoft/vscode/issues/52151)

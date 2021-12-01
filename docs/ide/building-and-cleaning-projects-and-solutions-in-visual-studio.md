@@ -1,28 +1,30 @@
 ---
 title: Building and Cleaning Projects and Solutions
-ms.date: 11/04/2016
+description: Learn how you can build, rebuild, or clean all or some of the projects or project items in a solution.
+ms.custom: SEO-VS-2020
+ms.date: 09/14/2021
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 f1_keywords:
-  - "VS.BuildProjectPicker"
-  - "vs.batchbuild"
+- VS.BuildProjectPicker
+- vs.batchbuild
 helpviewer_keywords:
-  - "Clean Solution command"
-  - "builds [Visual Studio], managing"
-  - "solution build configurations, starting"
-  - "Build Solution command"
-  - "project build configurations, starting"
-  - "build configurations, starting"
-  - "project build configurations, dependencies"
-  - "Rebuild Solution command"
-  - "solution build configurations, build order"
-  - "builds [Visual Studio], preparing"
+- Clean Solution command
+- builds [Visual Studio], managing
+- solution build configurations, starting
+- Build Solution command
+- project build configurations, starting
+- build configurations, starting
+- project build configurations, dependencies
+- Rebuild Solution command
+- solution build configurations, build order
+- builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Build and clean projects and solutions in Visual Studio
 
@@ -40,7 +42,7 @@ By using the procedures in this topic, you can build, rebuild, or clean all or s
 
 2. On the menu bar, choose **Build**, and then choose one of the following commands:
 
-    - Choose **Build** or **Build Solution** to compile only those project files and components that have changed since the most recent build.
+    - Choose **Build** or **Build Solution**, or press **Ctrl**+**Shift**+**B**, to compile only those project files and components that have changed since the most recent build.
 
         > [!NOTE]
         > The **Build** command becomes **Build Solution** when a solution includes more than one project.
@@ -75,11 +77,11 @@ By using the procedures in this topic, you can build, rebuild, or clean all or s
 
     - On the menu bar, choose **Build** > **Build Solution** (**Ctrl**+**Shift**+**B**).
 
-    When this check box is cleared, all projects, their dependencies, and the solution files are built when you run either of the preceding commands. By default, this check box is cleared.
+    When this check box is cleared, all projects, their dependencies, and the solution files are built when you run either of the preceding commands.
 
 ## To build only the selected Visual C++ project
 
-Choose a [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] project, and then, on the menu bar, choose **Build** > **Project Only**, and one of the following commands:
+Choose a C++ project, and then, on the menu bar, choose **Build** > **Project Only**, and one of the following commands:
 
 - **Build Only** *ProjectName*
 
@@ -89,11 +91,11 @@ Choose a [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] project, and 
 
 - **Link Only** *ProjectName*
 
-These commands apply only to the [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] project that you chose, without building, rebuilding, cleaning, or linking any project dependencies or solution files. Depending on your version of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], the **Project Only** submenu might contain more commands.
+These commands apply only to the C++ project that you chose, without building, rebuilding, cleaning, or linking any project dependencies or solution files. Depending on your version of Visual Studio, the **Project Only** submenu might contain more commands.
 
 ## To compile multiple C++ project items
 
-In **Solution Explorer**, choose multiple files that have can be compiled actions, open the shortcut menu for one of those files, and then choose **Compile**.
+In **Solution Explorer**, choose multiple files that have can be compiled actions, open the shortcut menu for one of those files, and then choose **Compile**, or press **Ctrl**+**F7**.
 
 If the files have dependencies, the files will be compiled in dependency order. The compile operation will fail if the files require a precompiled header that isn't available when you compile. The compile operation uses the current active solution configuration.
 

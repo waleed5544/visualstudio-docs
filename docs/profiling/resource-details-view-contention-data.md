@@ -1,5 +1,6 @@
 ---
 title: "Resource Details View - Contention Data | Microsoft Docs"
+description: Learn how the Resource Details view presents a timeline graph of the blocking events that were caused by contentions over a selected resource.
 ms.date: "11/04/2016"
 ms.topic: "conceptual"
 f1_keywords:
@@ -9,7 +10,9 @@ helpviewer_keywords:
 ms.assetid: a4ecfe1c-abbc-4fb3-9ab2-34de50486901
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-debug
+monikerRange: 'vs-2017'
 ms.workload:
   - "multiple"
 ---
@@ -30,9 +33,9 @@ The Resource Details view presents a timeline graph of the blocking events that 
 
 - Perform one of the following steps:
 
-    - Click **Zoom Out** to return to the previous zoom level.
+  - Click **Zoom Out** to return to the previous zoom level.
 
-    - Click **Zoom Reset** to show all of the timeline in the view.
+  - Click **Zoom Reset** to show all of the timeline in the view.
 
 #### To view the call stack of an event
 
@@ -48,7 +51,7 @@ The Resource Details view presents a timeline graph of the blocking events that 
 
 - In the timeline graph, click **Total**.
 
-     The Contentions view appears for the resource. For more information, see [Resource Contentions View](../profiling/resource-contentions-view-contention-data.md)
+     The Contentions view appears for the resource. For more information, see [Resource Contentions View](../profiling/resource-contentions-view-contention-data.md).
 
 #### To view all the contention events of a thread
 

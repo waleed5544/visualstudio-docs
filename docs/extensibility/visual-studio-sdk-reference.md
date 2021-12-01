@@ -1,21 +1,26 @@
 ---
-title: "Visual Studio SDK Reference | Microsoft Docs"
-ms.date: "11/04/2016"
-ms.topic: "conceptual"
+title: Visual Studio SDK Reference | Microsoft Docs
+description: These articles contain information about Visual Studio namespaces, related namespaces, and other areas of interest for developers who use the Visual Studio SDK.
+ms.custom: SEO-VS-2020
+ms.date: 11/04/2016
+ms.topic: reference
 helpviewer_keywords:
-  - "Visual Studio SDK, reference"
-  - "reference, Visual Studio SDK"
+- Visual Studio SDK, reference
+- reference, Visual Studio SDK
 ms.assetid: a6930db5-a112-4651-8de3-e520df851f82
-author: madskristensen
-ms.author: madsk
-manager: jillfra
+author: leslierichardson95
+ms.author: lerich
+manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
-  - "vssdk"
+- vssdk
 ---
 # Visual Studio SDK reference
+
 This section contains information about Visual Studio namespaces, related namespaces, and other areas of interest for developers who use the Visual Studio SDK.
 
 ## In this section
+
 - <xref:Microsoft.VisualStudio.TextManager.Interop>
  Legacy interop interfaces used for the editor and language services.
 
@@ -73,11 +78,9 @@ This section contains information about Visual Studio namespaces, related namesp
 - <xref:Microsoft.VisualStudio.Utilities>
  Classes used in the new editor.
 
-- <xref:Microsoft.Internal.VisualStudio.PlatformUI>
- Primarily Microsoft internal use only.
+- <xref:Microsoft.VisualStudio.PlatformUI>
 
-- <xref:Microsoft.Internal.VisualStudio.Shell.Interop>
- Microsoft internal use only.
+- <xref:Microsoft.VisualStudio.Shell.Interop>
 
 - <xref:Microsoft.VisualStudio>
  Classes for Visual Studio constants and helpers.
@@ -151,7 +154,7 @@ This section contains information about Visual Studio namespaces, related namesp
 - <xref:Microsoft.VisualStudio.WCFReference.Interop>
  Classes used for the Windows Communication Framework.
 
-- <xref:Microsoft.VisualStudio.TestTools.Vsip>
+- [Microsoft.VisualStudio.TestTools.Vsip](/previous-versions/aa993343(v=vs.120))
  Classes used for test tools.
 
 - <xref:EnvDTE>
@@ -193,10 +196,10 @@ This section contains information about Visual Studio namespaces, related namesp
 - <xref:VSLangProj80>
  Used for  C# and Visual Basic project automation.
 
-- <xref:VSLangProj90>
+- <xref:VslangProj90>
  Used for  C# and Visual Basic project automation.
 
-- <xref:VSLangProj100>
+- <xref:VslangProj100>
  Used for C# and Visual Basic project automation.
 
 - <xref:VSLangProj110>
@@ -292,6 +295,6 @@ This section contains information about Visual Studio namespaces, related namesp
 - <xref:Microsoft.Build.Utilities>
  Used for MSBuild.
 
-## Related Sections
-- [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
- Includes documentation, samples, and code to help you develop products that integrate with Visual Studio.
+## Related sections
+
+[Visual Studio SDK](../extensibility/visual-studio-sdk.md) includes documentation, samples, and code to help you develop products that integrate with Visual Studio.

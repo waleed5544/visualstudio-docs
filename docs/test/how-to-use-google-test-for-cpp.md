@@ -1,13 +1,13 @@
 ---
-title: "How to use Google Test for C++"
+title: How to use Google Test for C++
 description: Use Google Test to create C++ unit tests in Visual Studio.
 ms.date: 05/06/2017
-ms.topic: conceptual
-ms.author: mblome
+ms.topic: how-to
+ms.author: corob
 manager: markl
-ms.workload:
-  - "cplusplus"
-author: mikeblome
+ms.workload: 
+  - cplusplus
+author: corob-msft
 ---
 
 # How to use Google Test for C++ in Visual Studio
@@ -16,7 +16,7 @@ In Visual Studio 2017 and later, Google Test is integrated into the Visual Studi
 
 ![Install Google Test](media/cpp-google-component.png)
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## Add a Google Test project in Visual Studio 2019
 
@@ -44,13 +44,13 @@ In Visual Studio 2017 and later, Google Test is integrated into the Visual Studi
 
 In the **Test Project Configuration** dialog that appears, you can choose the project you want to test. When you choose a project, Visual Studio adds a reference to the selected project. If you choose no project, then you need to manually add references to the project(s) you want to test. When choosing between static and dynamic linking to the Google Test binaries, the considerations are the same as for any C++ program. For more information, see [DLLs in Visual C++](/cpp/build/dlls-in-visual-cpp).
 
- ![Configure Google Test Project](media/cpp-gtest-config.png)
+![Configure Google Test Project](media/cpp-gtest-config.png)
 
 ## Set additional options
 
 From the main menu, choose **Tools** > **Options** > **Test Adapter for Google Test** to set additional options. See the Google Test documentation for more information about these settings.
 
- ![Google Test Project settings](media/cpp-gtest-settings.png)
+![Google Test Project settings](media/cpp-gtest-settings.png)
 
 ## Add include directives
 
@@ -61,7 +61,7 @@ an IntelliSense window will appear and enable you to select the full path to the
 
 ## Write and run tests
 
-You are now ready to write and run Google Tests. See the [Google Test primer](https://github.com/google/googletest/blob/master/googletest/docs/primer.md) for information about the test macros. See [Run unit tests with Test Explorer](run-unit-tests-with-test-explorer.md) for information about discovering, running, and grouping your tests by using **Test Explorer**.
+You are now ready to write and run Google Tests. See the [Google Test primer](https://github.com/google/googletest/blob/master/docs/primer.md) for information about the test macros. See [Run unit tests with Test Explorer](run-unit-tests-with-test-explorer.md) for information about discovering, running, and grouping your tests by using **Test Explorer**.
 
 ## See also
 

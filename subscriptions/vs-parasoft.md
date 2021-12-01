@@ -1,12 +1,12 @@
 ---
-title: Parasoft Virtualize/SOAtest Professional Desktop Benefit | Microsoft Docs
+title: Parasoft Virtualize/SOAtest Professional in Visual Studio subscriptions | Microsoft Docs
 author: evanwindom
-ms.author: jaunger
-manager: evelynp
-ms.date: 12/19/2018
-ms.topic: conceptual
+ms.author: amast
+manager: shve
+ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
+ms.date: 03/17/2021
+ms.topic: how-to
 description:  Learn how to activate the Parasoft Virtualize/SOA Test Professional subscription included in your Visual Studio subscription.
-searchscope: VS Subscription
 ---
 
 # Parasoft Virtualize/SOAtest Professional Desktop in Visual Studio subscriptions
@@ -19,11 +19,14 @@ Test earlier and more often.  Simulate and test the behavior of unavailable evol
 
 2. Locate the Parasoft tile in the Tools section and click on the **Get Code** link at the bottom of the benefit tile.   You’ll receive a notification that the code was successfully retrieved.  Click **Activate**.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft Benefit Tile](_img/vs-parasoft/vs-parasoft-tile.png)
+   > ![Parasoft Benefit Tile](_img/vs-parasoft/vs-parasoft-tile.png "Click 'Get Code' on the Parasoft tile, then click 'Activate' to get started.")
 
 3. You’ll be redirected to the Parasoft website, where you’ll create an account.  Just provide your contact information and click **Submit**.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft Benefit Create Account](_img/vs-parasoft/vs-parasoft-account-cropped.png)
+   > ![Parasoft Benefit Create Account](_img/vs-parasoft/vs-parasoft-new-account.png "Provide your contact info then click 'Submit' to create your account.")
+
+   > [!Note]
+   > The table on the page shows pricing for a full year, plus a Visual Studio discount. This pricing will be applicable AFTER you have used your six month subscription.  
 
 4. Once you’ve created your account, you’ll see a notification that you've been sent an email with download instructions.  (Remember to check your spam or junk mail folders if you don’t see the email in your inbox.)
 
@@ -31,7 +34,7 @@ Test earlier and more often.  Simulate and test the behavior of unavailable evol
 
 6. Click on the link that corresponds to your operating system.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft Benefit Welcome Email](_img/vs-parasoft/vs-parasoft-email.png)
+   > ![Parasoft Benefit Welcome Email](_img/vs-parasoft/vs-parasoft-email.png "Choose the download link that matches your operating system.")
 
 7. Depending on which browser you use, you may see different dialogs providing you with the opportunity to run the installer.  In Internet Explorer, for example, you’ll see a list of recent downloads with parasoft_soavirt_9.10.2_win32_x86_64.exe listed at the top. Click **Run** to start the installer.
 
@@ -41,7 +44,7 @@ Test earlier and more often.  Simulate and test the behavior of unavailable evol
 
 10. The Parasoft SOAtest & Virtualize Setup Wizard will start.  Click **Next**.
     > [!div class="mx-imgBorder"]
-    > ![Parasoft Benefit Installation Start](_img/vs-parasoft/vs-parasoft-start-install.png)
+    > ![Parasoft Benefit Installation Start](_img/vs-parasoft/vs-parasoft-start-install.png "Click 'Next' to begin installation of Parasoft SOAtest & Virtualize.")
 
 11. Click **I accept the agreement**, then click **Next**.
 
@@ -52,14 +55,12 @@ Test earlier and more often.  Simulate and test the behavior of unavailable evol
 14. Specify where you would like the shortcut for the application installed, and click **Next**.
 
 15. The SOAtest Web Root Certificate Authority certificate is required for certain functional tests on HTTPS sites.  Choose whether to install the Root CA certificate and click **Next**.
-    > [!div class="mx-imgBorder"]
-    > ![Parasoft Benefit  Root CA Certificate](_img/vs-parasoft/vs-parasoft-install-root-ca.png)
+    > [!NOTE]
+    > Parasoft strongly recommends you choose to install the certificate.
 
 16. Choose whether you want desktop and quick launch icons created during installation, and click **Next**.
 
 17. Confirm the options you've selected, and click **Install** to begin installing the software.
-    > [!div class="mx-imgBorder"]
-    > ![Parasoft Benefit Ready to Install](_img/vs-parasoft/vs-parasoft-ready-to-install.png)
 
 18. When the setup is complete, click **Finish**. You're now ready to start using your Parasoft Virtualize/SOAtest Professional Desktop benefit!
 
@@ -68,20 +69,32 @@ Test earlier and more often.  Simulate and test the behavior of unavailable evol
 | Subscription Level                                                 |     Channels                                            | Benefit                                                          | Renewable?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail,  selected NFR<sup>1</sup> | 6 months       |  Yes       |
+| Visual Studio Enterprise subscription with GitHub Enterprise | VL | 6 months       |  Yes       |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Not available                                                           |NA         |
+| Visual Studio Professional subscription with GitHub Enterprise | VL                                      | Not available                                                           |NA         |
 | Visual Studio Test Professional (Standard)                         | VL, Retail                                              | Not available                                                           |NA         |
 | MSDN Platforms (Standard)                                          | VL, Retail                                              | Not available                                                           |NA         |
 | Visual Studio Enterprise, Visual Studio Professional (monthly cloud) | Azure                                       | Not available                                                           |NA|
 ||
 
-<sup>1</sup>  *Includes: Microsoft Partner Network (Enterprise).  Excludes:  Not for Resale (NFR), Visual Studio Industry Partner (VSIP), FTE, MCT Software & Services Developer, BizSpark, Imagine, Most Valuable Professional (MVP), Regional Director (RD).  MCT Software & Services.*
+<sup>1</sup>  *Includes: Microsoft Partner Network (Enterprise).  
+Excludes:  Not for Resale (NFR), Visual Studio Industry Partner (VSIP), FTE, MCT Software & Services Developer, BizSpark, Imagine, Most Valuable Professional (MVP), Regional Director (RD).  MCT Software & Services, NFR Basic*
 
 > [!NOTE]
 > Microsoft no longer offers Visual Studio Professional Annual subscriptions and Visual Studio Enterprise Annual subscriptions in Cloud Subscriptions. There will be no change to existing customers experience and ability to renew, increase, decrease, or cancel their subscriptions. New customers are encouraged to go to [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) to explore different options to purchase Visual Studio.
 
 ## Support resources
 - Need help with Parasoft products?  Check out these resources:
-    - Technical Support:  https://www.parasoft.com/support/
-    - Parasoft Resource Center:  https://www.parasoft.com/resources/
-- For assistance with sales, subscriptions, accounts and billing for Visual Studio Subscriptions, contact Visual Studio [Subscriptions Support](https://visualstudio.microsoft.com/subscriptions/support/).
+  - Technical Support:  https://www.parasoft.com/support/
+  - Parasoft Resource Center:  https://www.parasoft.com/resources/
+- For assistance with sales, subscriptions, accounts and billing for Visual Studio Subscriptions, contact [Visual Studio subscriptions support](https://my.visualstudio.com/gethelp).
 - Have a question about Visual Studio IDE, Azure DevOps Services or other Visual Studio products or services?  Visit [Visual Studio Support](https://visualstudio.microsoft.com/support/).
+
+## See also
+- [Visual Studio documentation](/visualstudio/)
+- [Azure DevOps documentation](/azure/devops/)
+- [Azure documentation](/azure/)
+- [Microsoft 365 documentation](/microsoft-365/)
+
+## Next steps
+Take advantage of your own development sandbox by activating your [Azure DevTest individual credit](/azure/devtest/offer/quickstart-individual-credit).

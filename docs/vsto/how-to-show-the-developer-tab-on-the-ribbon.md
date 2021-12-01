@@ -1,7 +1,9 @@
 ---
 title: "How to: Show the Developer tab on the ribbon"
-ms.date: "02/02/2017"
-ms.topic: "conceptual"
+description: Learn how you can use Visual Studio to programmatically show the Developer tab on the ribbon in a Microsoft Word document.
+ms.custom: SEO-VS-2020
+ms.date: "08/14/2019"
+ms.topic: "how-to"
 dev_langs:
   - "VB"
   - "CSharp"
@@ -10,7 +12,8 @@ helpviewer_keywords:
   - "Developer tab [Office development in Visual Studio]"
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
+ms.technology: office-development
 ms.workload:
   - "office"
 ---
@@ -25,6 +28,8 @@ ms.workload:
 
 > [!NOTE]
 > Access doesn't have a **Developer** tab.
+
+[!include[Add-ins note](includes/addinsnote.md)]
 
 ## To show the Developer tab
 

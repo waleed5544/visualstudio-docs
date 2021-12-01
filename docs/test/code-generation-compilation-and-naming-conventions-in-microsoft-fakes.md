@@ -1,24 +1,27 @@
 ---
-title: "Microsoft Fakes: Generate & compile code; naming conventions"
+title: 'Microsoft Fakes: Generate & compile code; naming conventions'
+description: Learn about options and issues in Fakes code generation and compilation, including the naming conventions for Fakes-generated types, members, and parameters.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: gewarren
-manager: jillfra
+ms.author: mikejo
+manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
-  - "multiple"
-author: gewarren
+- multiple
+author: mikejo5000
 ---
 # Code generation, compilation, and naming conventions in Microsoft Fakes
 
-This article discusses options and issues in Fakes code generation and compilation, and describes the naming conventions for Fakes generated types, members, and parameters.
+This article discusses options and issues in Fakes code generation and compilation, and describes the naming conventions for Fakes-generated types, members, and parameters.
 
 **Requirements**
 
 - Visual Studio Enterprise
 - A .NET Framework project
-
-> [!NOTE]
-> .NET Standard projects are not supported.
+::: moniker range=">=vs-2019"
+- .NET Core, .NET 5.0 or later, and SDK-style project support previewed in Visual Studio 2019 Update 6, and is enabled by default in Update 8. For more information, see [Microsoft Fakes for .NET Core and SDK-style projects](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+::: moniker-end
 
 ## Code generation and compilation
 
@@ -104,9 +107,9 @@ The Fakes code generator generates shim types and stub types for types that are 
 [assembly: InternalsVisibleTo("FileSystem.Tests")]
 ```
 
- **Internal types in strongly named assemblies**
+**Internal types in strongly named assemblies**
 
- If the shimmed assembly is strongly named, and you want to access internal types of the assembly:
+If the shimmed assembly is strongly named, and you want to access internal types of the assembly:
 
 - Both your test assembly and the Fakes assembly must be strongly named.
 
@@ -173,11 +176,11 @@ From your unit test projects, add a reference to the compiled Fakes assemblies t
 
 In a Team Build environment, all build outputs are merged into a single directory. If multiple projects use Fakes, it might happen that Fakes assemblies from different versions override each other. For example, TestProject1 fakes *mscorlib.dll* from the .NET Framework 2.0 and TestProject2 fakes *mscorlib.dll* for the .NET Framework 4 would both yield to a *mscorlib.Fakes.dll* Fakes assembly.
 
- To avoid this issue, Fakes should automatically create version qualified Fakes assembly names for non-project references when adding the *.fakes* files. A version-qualified Fakes assembly name embeds a version number when you create the Fakes assembly name:
+To avoid this issue, Fakes should automatically create version qualified Fakes assembly names for non-project references when adding the *.fakes* files. A version-qualified Fakes assembly name embeds a version number when you create the Fakes assembly name:
 
- Given an assembly MyAssembly and a version 1.2.3.4, the Fakes assembly name is MyAssembly.1.2.3.4.Fakes.
+Given an assembly MyAssembly and a version 1.2.3.4, the Fakes assembly name is MyAssembly.1.2.3.4.Fakes.
 
- You can change or remove this version by the editing the Version attribute of the Assembly element in the *.fakes*:
+You can change or remove this version by the editing the Version attribute of the Assembly element in the *.fakes*:
 
 ```xml
 attribute of the Assembly element in the .fakes:
@@ -191,7 +194,7 @@ attribute of the Assembly element in the .fakes:
 
 ### Shim type and stub type naming conventions
 
- **Namespaces**
+**Namespaces**
 
 - .Fakes suffix is added to the namespace.
 

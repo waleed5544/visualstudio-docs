@@ -1,7 +1,9 @@
 ---
 title: "How to: Programmatically send email"
-ms.date: "02/02/2017"
-ms.topic: "conceptual"
+description: Use Visual Studio to programmatically send an email from Microsoft Outlook. This example sends an email message to contacts that have the domain name example.com.
+ms.custom: SEO-VS-2020
+ms.date: "08/14/2019"
+ms.topic: "how-to"
 dev_langs:
   - "VB"
   - "CSharp"
@@ -12,7 +14,8 @@ helpviewer_keywords:
   - "e-mail [Office development in Visual Studio], sending"
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
+ms.technology: office-development
 ms.workload:
   - "office"
 ---
@@ -21,8 +24,10 @@ ms.workload:
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
+[!include[Add-ins note](includes/addinsnote.md)]
+
 ## Example
- [!code-csharp[Trin_OL_ProgramEmail#1](../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs" id="Snippet1":::
 
 ## Compile the code
  This example requires:

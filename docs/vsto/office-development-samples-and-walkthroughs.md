@@ -1,6 +1,8 @@
 ---
 title: "Office development samples and walkthroughs"
-ms.date: "02/02/2017"
+description: Learn about sample applications, example code, and step-by-step walkthroughs that show the syntax, structure, and techniques used to build Office solutions.
+ms.custom: SEO-VS-2020
+ms.date: "08/14/2019"
 ms.topic: "conceptual"
 dev_langs:
   - "VB"
@@ -17,7 +19,8 @@ helpviewer_keywords:
   - "examples [Office development in Visual Studio]"
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
+ms.technology: office-development
 ms.workload:
   - "office"
 ---
@@ -28,8 +31,7 @@ ms.workload:
 
  For information about securing applications, see [Secure Office solutions](../vsto/securing-office-solutions.md).
 
-> [!NOTE]
-> Interested in developing solutions that extend the Office experience across [multiple platforms](https://dev.office.com/add-in-availability)? Check out the new [Office Add-ins model](https://dev.office.com/docs/add-ins/overview/office-add-ins). Office Add-ins have a small footprint compared to VSTO add-ins and solutions, and you can build them by using almost any web programming technology, such as HTML5, JavaScript, CSS3, and XML.
+[!include[Add-ins note](includes/addinsnote.md)]
 
 ## In this section
 

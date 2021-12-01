@@ -1,5 +1,7 @@
 ---
 title: "View threads in the debugger | Microsoft Docs"
+description: Use Threads to examine and control threads. You can group, sort, flag, freeze, thaw, and search for threads, select columns, and display call stacks. 
+ms.custom: SEO-VS-2020
 ms.date: "10/29/2018"
 ms.topic: "conceptual"
 f1_keywords:
@@ -20,7 +22,8 @@ helpviewer_keywords:
 ms.assetid: 590ffd57-0556-43d8-8962-ee27e5b2b7d7
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
   - "multiple"
 ---
@@ -95,9 +98,9 @@ A yellow arrow indicates the current thread (and the location of the execution p
 
 - Follow either of the following steps:
 
-    - Double-click any thread.
+  - Double-click any thread.
 
-    - Right-click a thread and select **Switch To Thread**.
+  - Right-click a thread and select **Switch To Thread**.
 
 ## Group and sort threads
  When you group threads, a heading appears in the table for each group. The heading contains a group description, such as **Worker Thread** or **Unflagged Threads**, and a tree control. The member threads of each group appear under the group heading. If you want to hide the member threads for a group, use the tree control to collapse the group.

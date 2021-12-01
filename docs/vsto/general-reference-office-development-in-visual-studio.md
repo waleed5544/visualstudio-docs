@@ -1,8 +1,9 @@
 ---
 title: "General reference (Office development in Visual Studio)"
+description: Learn general reference information about Microsoft Office development projects in Visual Studio.
 titleSuffix: ""
-ms.custom: "seodec18"
-ms.date: "02/02/2017"
+
+ms.date: "08/14/2019"
 ms.topic: "conceptual"
 dev_langs:
   - "VB"
@@ -11,15 +12,15 @@ helpviewer_keywords:
   - "Office development in Visual Studio, reference"
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
+ms.technology: office-development
 ms.workload:
   - "office"
 ---
 # General reference (Office development in Visual Studio)
   This section contains technical details about Microsoft Office projects in Visual Studio.
 
-> [!NOTE]
-> Interested in developing solutions that extend the Office experience across [multiple platforms](https://dev.office.com/add-in-availability)? Check out the new [Office Add-ins model](https://dev.office.com/docs/add-ins/overview/office-add-ins). Office Add-ins have a small footprint compared to VSTO add-ins and solutions, and you can build them by using almost any web programming technology, such as HTML5, JavaScript, CSS3, and XML.
+[!include[Add-ins note](includes/addinsnote.md)]
 
 ## In this section
 - [Office primary interop assemblies](../vsto/office-primary-interop-assemblies.md)

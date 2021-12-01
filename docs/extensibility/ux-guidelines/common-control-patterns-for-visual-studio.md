@@ -1,13 +1,16 @@
 ---
-title: "Common Control Patterns for Visual Studio | Microsoft Docs"
-ms.date: "04/26/2017"
-ms.topic: "conceptual"
+title: Common Control Patterns for Visual Studio | Microsoft Docs
+description: Learn about how Visual Studio common controls follow the Windows Desktop interaction guidelines and about special situations that augment those guidelines.
+ms.custom: SEO-VS-2020
+ms.date: 04/26/2017
+ms.topic: reference
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
-author: madskristensen
-ms.author: madsk
-manager: jillfra
+author: leslierichardson95
+ms.author: lerich
+manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
-  - "vssdk"
+- vssdk
 ---
 # Common Control Patterns for Visual Studio
 ## <a name="BKMK_CommonControls"></a> Common controls
@@ -290,7 +293,8 @@ Guidelines for using the button:
 #### Graphical buttons
 Some buttons should always use a graphical image and never include text to conserve space and avoid localization problems. These are often used in field pickers and other sortable lists.
 
-> **Note:** Users have to tab to these buttons (there are no access keys), so place them in a sensible order. Map the `name` property of the button to the action that it takes so that screen readers correctly interpret the button action.
+> [!NOTE]
+> Users have to tab to these buttons (there are no access keys), so place them in a sensible order. Map the `name` property of the button to the action that it takes so that screen readers correctly interpret the button action.
 
 | Function | Button |
 | --- | --- |

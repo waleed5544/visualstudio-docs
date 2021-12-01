@@ -1,14 +1,16 @@
 ---
 title: Accessibility of Help Viewer
+description: Review the list of accessibility features in the Microsoft Help Viewer, covering keyboard access, font size, window size, and Help Viewer position.
 ms.date: 11/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
   - "accessibility features [Help Viewer]"
   - "Help Viewer, accessibility features"
 ms.assetid: 94a3225c-d2cb-4565-8453-855d1cdc1acf
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
   - "multiple"
 ---

@@ -1,13 +1,15 @@
 ---
 title: Install offline help
+description: See how to install Microsoft Help Viewer to read offline help. Several products, such as Visual Studio and SQL Server, use Help Viewer to deliver help content.
 ms.date: 11/01/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
   - "installing Help Viewer"
   - "Help Viewer, installing"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
   - "multiple"
 ---

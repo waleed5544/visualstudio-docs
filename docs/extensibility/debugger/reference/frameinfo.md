@@ -1,20 +1,22 @@
 ---
-title: "FRAMEINFO | Microsoft Docs"
-ms.date: "11/04/2016"
+description: "Describes a stack frame."
+title: FRAMEINFO | Microsoft Docs
+ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-  - "FRAMEINFO"
+- FRAMEINFO
 helpviewer_keywords:
-  - "FRAMEINFO structure"
+- FRAMEINFO structure
 ms.assetid: 95001b89-dddb-45bb-889d-8327994e38a5
-author: madskristensen
-ms.author: madsk
-manager: jillfra
+author: leslierichardson95
+ms.author: lerich
+manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
-  - "vssdk"
+- vssdk
 dev_langs:
-  - CPP
-  - CSharp
+- CPP
+- CSharp
 ---
 # FRAMEINFO
 Describes a stack frame.
@@ -85,16 +87,16 @@ The maximum physical stack address.
 `m_pFrame`\
 The [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) object that represents this stack frame.
 
-`m_pFrame`\
+`m_pModule`\
 The [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) object that represents the module that contains this stack frame.
 
 `m_fHasDebugInfo`\
 Non-zero (`TRUE`) if debug information exists in the given frame.
 
-`m_fHasDebugInfo`\
+`m_fStaleCode`\
 Non-zero (`TRUE`) if the stack frame is associated with code that is no longer valid.
 
-`m_fHasDebugInfo`\
+`m_fAnnotatedFrame`\
 Non-zero (`TRUE`) if the stack frame is annotated by the session debug manager (SDM).
 
 ## Remarks

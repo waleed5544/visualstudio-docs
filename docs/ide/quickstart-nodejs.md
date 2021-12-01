@@ -1,110 +1,212 @@
 ---
-title: "Quickstart: Use Visual Studio to create your first Node.js app"
+title: "Create your first Node.js app"
+ms.custom: [vs-acquisition]
 description: In this quickstart, you create a Node.js app in Visual Studio
-ms.date: 06/27/2018
+ms.date: 09/14/2021
 ms.technology: vs-javascript
 ms.topic: quickstart
 ms.devlang: javascript
 ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
 dev_langs:
   - JavaScript
 ms.workload:
   - "nodejs"
 ---
-# Quickstart: Use Visual Studio to create your first Node.js app
+# Quickstart: Create your first Node.js app with Visual Studio
 
-In this 5-10 minute introduction to the Visual Studio integrated development environment (IDE), you'll create a simple Node.js web application.
+In this 5-10 minute introduction to the Visual Studio integrated development environment (IDE), you create a simple Node.js web app.
 
 ## Prerequisites
 
-* You must have Visual Studio installed and the Node.js development workload.
+Before you begin, install Visual Studio and set up your Node.js environment.
 
-    ::: moniker range=">=vs-2019"
-    If you haven't already installed Visual Studio 2019, go to the [Visual Studio downloads](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) page to install it for free.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    If you haven't already installed Visual Studio 2017, go to the [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) page to install it for free.
-    ::: moniker-end
+::: moniker range=">=vs-2022"
+### Install Visual Studio and the Node.js workload
 
-    If you need to install the workload but already have Visual Studio, go to **Tools** > **Get Tools and Features...**, which opens the Visual Studio Installer. Choose the **Node.js development** workload, then choose **Modify**.
+If you haven't yet installed Visual Studio:
 
-    ![Node.js workload in VS Installer](../ide/media/quickstart-nodejs-workload.png)
+1. Go to the [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) page to install Visual Studio 2022 for free.
 
-* You must have the Node.js runtime installed.
+1. In the Visual Studio Installer, select the **Node.js development** workload, and select **Install**.
 
-    If you don't have it installed, install the LTS version from the [Node.js](https://nodejs.org/en/download/) website. In general, Visual Studio automatically detects the installed Node.js runtime. If it does not detect an installed runtime, you can configure your project to reference the installed runtime in the properties page (after you create a project, right-click the project node and choose **Properties**).
+   ![Screenshot showing the Node j s workload selected in the Visual Studio Installer.](../ide/media/quickstart-nodejs-workload.png)
 
-## Create a project
+If you have Visual Studio installed already.
 
-First, you'll create an Node.js web application project.
+1. In Visual Studio, go to **Tools** > **Get Tools and Features**.
 
-1. If you don't have the Node.js runtime already installed, install the LTS version from the [Node.js](https://nodejs.org/en/download/) website.
+1. In the Visual Studio Installer, choose the **Node.js development** workload, and select **Modify** to download and install the workload.
 
-    In general, Visual Studio automatically detects the installed Node.js runtime. If it does not detect an installed runtime, you can configure your project to reference the installed runtime in the properties page (after you create a project, right-click the project node and choose **Properties**).
+### Set up your Node.js environment
 
-1. Open Visual Studio.
+[Install the LTS version of the Node.js runtime](https://nodejs.org/en/download/). The LTS version has the best compatibility with other frameworks and libraries.
 
-1. Create a new project.
+Although Node.js is built for 32-bit and 64-bit architectures, the Node.js installer only supports one version at a time.
 
-    ::: moniker range=">=vs-2019"
-    Press **Esc** to close the start window. Type **Ctrl + Q** to open the search box, type **Node.js**, then choose **Create new Blank Node.js Web application project** (JavaScript). In the dialog box that appears, choose **Create**.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    From the top menu bar, choose **File** > **New** > **Project**. In the left pane of the **New Project** dialog box, expand **JavaScript**, then choose **Node.js**. In the middle pane, choose **Blank Node.js Web application**, then choose **OK**.
-    ::: moniker-end
-    If you don't see the **Blank Node.js Web application** project template, you must add the **Node.js development** workload. For detailed instructions, see the [Prerequisites](#prerequisites).
+Visual Studio usually detects your installed runtime, but if not, you can configure your project to reference the installed runtime:
 
-    Visual Studio creates and the new solution and opens the project. *server.js* opens in the editor in the left pane.
+   1. After [creating your project](#create-your-app-project), right-click the project node.
+
+   1. Select **Properties**, and set the **Node.exe path**. You can use a global Node.js installation, or specify the path to a local interpreter for any Node.js project.
+
+:::moniker-end
+::: moniker range="vs-2019"
+### Install Visual Studio
+
+If you haven't already installed Visual Studio 2019, go to the [Visual Studio downloads](https://visualstudio.microsoft.com/downloads) page to install it for free.
+::: moniker-end
+::: moniker range="vs-2017"
+### Install Visual Studio
+
+If you haven't already installed Visual Studio 2017, go to the [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) page to install it for free.
+::: moniker-end
+
+::: moniker range="<=vs-2019"
+### Set up your Node.js environment
+
+Visual Studio can help set up your environment, including installing tools common with Node.js development.
+
+1. In Visual Studio, go to **Tools** > **Get Tools and Features**.
+
+1. In the Visual Studio Installer, choose the **Node.js development** workload and select **Modify** to download and install the workload.
+
+    ![Screenshot showing the Node J S workload selected in the Visual Studio Installer.](../ide/media/quickstart-nodejs-workload.png)
+
+1. Install the LTS version of the [Node.js runtime](https://nodejs.org/en/download/). We recommend the LTS version for best compatibility with outside frameworks and libraries.
+
+    Although Node.js is built for 32-bit and 64-bit architectures, the Node.js installer only supports one version installed at a time.
+
+1. If Visual Studio doesn't detect your installed runtime (it generally does), configure your project to reference the installed runtime:
+
+   1. After you [create your project](#create-your-app-project), right-click the project node.
+
+   1. Select **Properties** and set the **Node.exe path**. You can use a global installation of Node.js or specify the path to a local interpreter in each of your Node.js projects.
+
+::: moniker-end
+## Create your app project
+
+In Visual Studio, create a new Node.js project.
+
+::: moniker range=">=vs-2022"
+
+1. Start Visual Studio, and then press **Esc** to close the start window.
+
+1. Press **Ctrl**+**Q**, and then type *node.js* in the search box.
+
+1. Select **Blank Node.js Web Application**.
+
+1. In the dialog box, select **Create**.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. Press **Esc** to close the start window.
+
+1. Press **Ctrl + Q** to open the search box, then type **Node.js**.
+
+1. Choose **Blank Node.js Web Application (JavaScript)**. In the dialog, select **Create**.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+1. From the top menu bar, choose **File** > **New** > **Project**.
+
+1. In the left pane of the **New Project** dialog, expand **JavaScript** and choose **Node.js**.
+
+1. In the middle pane, choose **Blank Node.js Web application** and select **OK**.
+
+::: moniker-end
+Visual Studio creates and opens the project. The project's *server.js* file opens in the editor.
+
+If you don't see the **Blank Node.js Web Application** project template, you need to add the **Node.js development** workload. For instructions, see [Prerequisites](#prerequisites).
 
 ## Explore the IDE
 
-1. Take a look at **Solution Explorer** in the right pane.
+::: moniker range=">=vs-2022"
+Visual Studio can help set up your environment, including installing tools common with Node.js development.
 
-   ![Solution Explorer](../ide/media/quickstart-nodejs-solution-explorer.png)
+1. In the right pane, look at the **Solution Explorer**.
+   
+   - At the top level is a *solution*, which by default has the same name as your project. A solution, represented by a *.sln* file on disk, is a container for one or more related projects.
+   - Your project, with the name you used when you set it up, is highlighted in bold. On disk, the project is represented by a *.njsproj* file in your project folder.
+   - The **npm** node shows installed npm packages. You can right-click the **npm** node to search for and install npm packages by using a dialog.
 
-   - Highlighted in bold is your project, using the name you gave in the **New Project** dialog box. On disk, this project is represented by a *.njsproj* file in your project folder.
+   ![Screenshot showing the Solution Explorer pane.](../ide/media/vs-2022/quickstart-nodejs-solution-explorer.png)
 
-   - At the top level is a solution, which by default has the same name as your project. A solution, represented by a *.sln* file on disk, is a container for one or more related projects.
+1. To install npm packages or Node.js commands from a command prompt, right-click the project node and choose **Open Command Prompt Here**.
 
-   - The npm node shows any installed npm packages. You can right-click the npm node to search for and install npm packages using a dialog box.
+   ![Screenshot showing Open Command Prompt Here in the project context menu.](../ide/media/vs-2022/quickstart-nodejs-command-prompt.png)
 
-1. If you want to install npm packages or Node.js commands from a command prompt, right-click the project node and choose **Open Command Prompt Here**.
+1. To test navigation to source code, in the open *server.js* file, select `createServer` and press **F12**, or right-click `createServer` and select **Go To Definition** from the context menu. This command takes you to the definition of the `createServer` function in *http.d.ts*.
 
-   ![Node.js command prompt](../ide/media/quickstart-nodejs-command-prompt.png)
+   ![Screenshot showing Go To Definition in the createServer context menu.](../ide/media/vs-2022/quickstart-nodejs-go-to-definition.png)
 
-1. In the *server.js* file in the editor (left pane), choose `http.createServer` and then press **F12** or choose **Go To Definition** from the context (right-click) menu. This command takes you to the definition of the `createServer` function in *index.d.ts*.
+1. Back in *server.js*, locate this line of code: `res.end('Hello World\n');`, and modify it to:
 
-   ![Go To Definition context menu](../ide/media/quickstart-nodejs-gotodefinition.png)
+   `res.end('Hello World\n' + res.connection.`
 
-1. Got back to *server.js*, then put your cursor at the end of the string in this line of code, `res.end('Hello World\n');`, and modify it so that it looks like this:
+   When you type `connection.`, IntelliSense provides options to autocomplete the code entry.
 
-    `res.end('Hello World\n' + res.connection.`
+   ![Screenshot showing IntelliSense auto-complete options.](../ide/media/vs-2022/quickstart-nodejs-intellisense.png)
 
-    Where you type `connection.`, IntelliSense provides options to auto-complete the code entry.
-
-   ![IntelliSense auto-complete](../ide/media/quickstart-nodejs-intellisense.png)
-
-1. Choose **localPort**, and then type `);` to complete the statement so that it looks like this:
+1. Choose `localPort`, and type `);` to complete the statement:
 
     `res.end('Hello World\n' + res.connection.localPort);`
 
-## Run the application
+::: moniker-end
 
-1. Press **Ctrl**+**F5** (or **Debug > Start Without Debugging**) to run the application. The app opens in a browser.
+::: moniker range="<=vs-2019"
+1. In the right pane, look at the **Solution Explorer**.
+   
+   - At the top level is a *solution*, which by default has the same name as your project. A solution, represented by a *.sln* file on disk, is a container for one or more related projects.
+   - Your project, with the name you used when you set it up, is highlighted in bold. On disk, the project is represented by a *.njsproj* file in your project folder.
+   - The **npm** node shows installed npm packages. You can right-click the **npm** node to search for and install npm packages by using a dialog.
 
-1. In the browser window, you will see "Hello World" plus the local port number.
+   ![Screenshot showing the Solution Explorer pane.](../ide/media/quickstart-nodejs-solution-explorer.png)
 
-1. Close the web browser.
+1. To install npm packages or Node.js commands from a command prompt, right-click the project node and choose **Open Command Prompt Here** from the context menu.
 
-Congratulations on completing this Quickstart in which you got started with the Visual Studio IDE and Node.js. If you'd like to delve deeper into its capabilities, continue with a tutorial in the **Tutorials** section of the table of contents.
+   ![Screenshot showing Open Command Prompt Here in the project context menu.](../ide/media/quickstart-nodejs-command-prompt.png)
+
+1. To test navigation to source code, in the open *server.js* file, select **http.createServer** and press **F12** or choose **Go To Definition** from the right-click context menu. This command takes you to the definition of the `createServer` function in *http.d.ts*.
+
+   ![Screenshot showing Go To Definition in the createServer context menu.](../ide/media/quickstart-nodejs-gotodefinition.png)
+
+1. Back in *server.js*, locate this line of code: `res.end('Hello World\n');`, and modify it to:
+
+   `res.end('Hello World\n' + res.connection.`
+
+   When you type **connection.**, IntelliSense provides options to autocomplete the code entry.
+
+   ![Screenshot showing IntelliSense auto-complete options.](../ide/media/quickstart-nodejs-intellisense.png)
+
+1. Choose **localPort**, and type `);` to complete the statement:
+
+    `res.end('Hello World\n' + res.connection.localPort);`
+:::moniker-end
+
+## Run the app
+
+1. Press **Ctrl**+**F5** or select **Debug** > **Start Without Debugging** to run the app.
+ 
+   The app opens in a browser.
+
+1. In the browser, verify that you see a **Hello World** message and the local port number.
+
+Congratulations! You created a simple Node.js app with Visual Studio. To delve deeper, continue to the **Tutorials** section of the table of contents.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
 > [Deploy the app to Linux App Service](../javascript/publish-nodejs-app-azure.md)
 
-- [Tutorial for Node.js and Express](../javascript/tutorial-nodejs.md)
-- [Tutorial for Node.js and React](../javascript/tutorial-nodejs-with-react-and-jsx.md)
+> [!div class="nextstepaction"]
+> [Tutorial for Node.js and Express](../javascript/tutorial-nodejs.md)
+
+> [!div class="nextstepaction"]
+> [Tutorial for Node.js and React](../javascript/tutorial-nodejs-with-react-and-jsx.md)
+

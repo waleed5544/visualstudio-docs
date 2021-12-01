@@ -1,14 +1,17 @@
 ---
-title: "Create Add-In for Web Performance Test Results Viewer"
+title: Create Add-In for Web Performance Test Results Viewer
+description: Learn how to create a Visual Studio add-in to extend the Web Performance Test Results Viewer's UI and implement the classes necessary to extend the UI.
+ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
-ms.topic: conceptual
-helpviewer_keywords:
-  - "Web performance tests, Visual Studio Add-in"
-  - "Visual Studio Add-in, Web performance tests"
+ms.topic: how-to
+helpviewer_keywords: 
+  - Web performance tests, Visual Studio Add-in
+  - Visual Studio Add-in, Web performance tests
 ms.assetid: 1118c604-4b1b-4b21-a04e-45995b676fa8
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: mikejo5000
+ms.author: mikejo
+manager: jmartens
+ms.technology: vs-ide-test
 ---
 # How to: Create an add-in for the Web Performance Test Results Viewer
 
@@ -37,9 +40,9 @@ Either create or open a non-production solution that you can experiment with whi
 
 An add-in is a compiled DLL that runs in the Visual Studio integrated development environment (IDE). Compilation helps protect your intellectual property and improves performance. Although you can create add-ins manually, you may find it easier to use the **Add-In Wizard**. This wizard creates a functional but basic add-in that you can run immediately after you create it. After the **Add-In Wizard** generates the basic program, you can add code to it and customize it.
 
- The **Add-In Wizard** lets you supply a display name and description for your add-in. Both will appear in **Add-In Manager**. Optionally, you can have the wizard generate code that adds to the **Tools** menu a command to open the add-in. You can also choose to display a custom **About** dialog box for your add-in. When the wizard is finished, you have a new project that has just one class  that implements the add-in. That class is named Connect.
+The **Add-In Wizard** lets you supply a display name and description for your add-in. Both will appear in **Add-In Manager**. Optionally, you can have the wizard generate code that adds to the **Tools** menu a command to open the add-in. You can also choose to display a custom **About** dialog box for your add-in. When the wizard is finished, you have a new project that has just one class  that implements the add-in. That class is named Connect.
 
- You will use the **Add-In Manager** at the end of this article.
+You will use the **Add-In Manager** at the end of this article.
 
 ### To create an add-in by using the Add-In Wizard
 
@@ -320,9 +323,9 @@ To improve security by preventing malicious add-ins from automatically activatin
 
 In addition, this options page allows you to specify the folders in which Visual Studio searches for *.AddIn* registration files. This improves security by allowing you to limit the locations where *.AddIn* registration files can be read. This  helps prevent malicious *.AddIn* files from unintentionally being used.
 
- **Add-In Security Settings**
+**Add-In Security Settings**
 
- The settings in the options page for add-in security are as follows:
+The settings in the options page for add-in security are as follows:
 
 - **Allow Add-in components to load.** Selected by default. When selected, add-ins are allowed to load in Visual Studio. When not selected, add-ins are prohibited from loading in Visual Studio.
 

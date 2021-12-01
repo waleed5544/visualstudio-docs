@@ -1,11 +1,14 @@
 ---
 title: "Security Considerations when Working with XML Data"
+description: Learn about security considerations when working with XML data in the XML editor or the XSLT debugger.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fce2b708-1aef-454f-be59-52b76f359351
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
   - "multiple"
 ---
@@ -15,7 +18,7 @@ This topic discusses security issues that you need to know about when working wi
 
 ## XML editor
 
- The XML editor is based on the Visual Studio Text Editor. It relies on the <xref:System.Xml> and <xref:System.Xml.Xsl> classes to handle many of the XML processes.
+The XML editor is based on the Visual Studio Text Editor. It relies on the <xref:System.Xml> and <xref:System.Xml.Xsl> classes to handle many of the XML processes.
 
 - XSLT transformations are executed in a new application domain. The XSLT transformations are *sandboxed*; that is, the code access security policy of your computer is used to determine the restricted permissions based on where the XSLT style sheet is located. For example, style sheets from an Internet location have the most restricted permissions, whereas style sheets copied to your hard drive run with Full Trust.
 
@@ -27,7 +30,7 @@ This topic discusses security issues that you need to know about when working wi
 
 ## XSLT debugger
 
- The XSLT debugger utilizes the Visual Studio managed debug engine and classes from the <xref:System.Xml> and <xref:System.Xml.Xsl> namespace.
+The XSLT debugger utilizes the Visual Studio managed debug engine and classes from the <xref:System.Xml> and <xref:System.Xml.Xsl> namespace.
 
 - The XSLT debugger runs each XSLT transformation in a sandboxed application domain. The code access security policy of your computer is used to determine the restricted permissions based on where the XSLT style sheet is located. For example, style sheets from an Internet location have the most restricted permissions, whereas style sheets copied to your hard drive run with Full Trust.
 

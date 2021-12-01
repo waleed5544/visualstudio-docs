@@ -1,33 +1,25 @@
 ---
 title: "Publish to Azure by importing publish settings"
-description: "Create and import a publishing profile to deploy an application from Visual Studio to Azure App Service"
-ms.date: 05/07/2018
+description: "Create and import publish settings to deploy an application from Visual Studio to Azure App Service"
+ms.date: 10/22/2021
 ms.topic: tutorial
 helpviewer_keywords:
   - "deployment, publish settings"
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
   - "multiple"
 ---
-# Publish an application to Azure App Service by importing publish settings in Visual Studio
+# Get publish settings from Azure and import into Visual Studio
 
-You can use the **Publish** tool to import publish settings and then deploy your app. In this article, we use publish settings for Azure App Service, but you can use similar steps to import publish settings from [IIS](../deployment/tutorial-import-publish-settings-iis.md). In some scenarios, use of a publish settings profile can be faster than manually configuring deployment to the service for each installation of Visual Studio.
+You can use the **Publish** tool to import publish settings and then deploy your app. In this article, we use publish settings for Azure App Service.
 
-These steps apply to ASP.NET, ASP.NET Core, and .NET Core apps in Visual Studio. You can also import publish settings for [Python](../python/publishing-python-web-applications-to-azure-from-visual-studio.md) apps.
-
-In this tutorial, you will:
-
-> [!div class="checklist"]
-> * Generate a publish settings file from Azure App Service
-> * Import the publish settings file into Visual Studio
-> * Deploy the app to Azure App Service
-
-A publish settings file (*\*.publishsettings*) is different than a publishing profile (*\*.pubxml*) created in Visual Studio. A publish settings file is created by Azure App Service, and then it can be imported into Visual Studio.
+These steps apply to ASP.NET and ASP.NET Core web apps. You can also import publish settings for [Python](../python/publishing-python-web-applications-to-azure-from-visual-studio.md) apps.
 
 > [!NOTE]
-> If you just need to copy a Visual Studio publishing profile (*\*.pubxml* file) from one installation of Visual Studio to another, you can find the publishing profile, *\<profilename\>.pubxml*, in the *\\<projectname\>\Properties\PublishProfiles* folder for managed project types. For websites, look under the *\App_Data* folder. The publishing profiles are MSBuild XML files.
+> A publish settings file (*\*.publishsettings*) is different than a publishing profile (*\*.pubxml*) created in Visual Studio. A publish settings file is created by Azure App Service, and then it can be imported into Visual Studio.
 
 ## Prerequisites
 
@@ -51,15 +43,15 @@ A publish settings file (*\*.publishsettings*) is different than a publishing pr
 
 1. On the computer running Visual Studio, create a new project.
 
-    Choose the correct template. In this example, choose either **ASP.NET Web Application (.NET Framework)** or (for C# only) **ASP.NET Core Web Application**, and then click **OK**.
+    Choose the correct template. In this example, choose either **ASP.NET Web Application (.NET Framework)** or (for C# only) **ASP.NET Core Web Application**, and then select **OK**.
 
-    If you don't see the specified project templates, click the **Open Visual Studio Installer** link in the left pane of the **New Project** dialog box. The Visual Studio Installer launches. Install the **ASP.NET and web development** workload.
+    If you don't see the specified project templates, go to the **Open Visual Studio Installer** link in the left pane of the **New Project** dialog box. The Visual Studio Installer launches. Install the **ASP.NET and web development** workload.
 
     The project template you choose (ASP.NET or ASP.NET Core) must correspond to the version of ASP.NET installed on the web server.
 
-1. Choose either **MVC** (.NET Framework) or **Web Application (Model-View-Controller)** (for .NET Core), and make sure that **No Authentication** is selected, and then click **OK**.
+1. Choose either **MVC** (.NET Framework) or **Web Application (Model-View-Controller)** (for .NET Core), and make sure that **No Authentication** is selected, and then select **OK**.
 
-1. Type a name like **MyWebApp** and click **OK**.
+1. Type a name like **MyWebApp** and select **OK**.
 
     Visual Studio creates the project.
 
@@ -69,7 +61,7 @@ A publish settings file (*\*.publishsettings*) is different than a publishing pr
 
 1. In the Azure portal, open the Azure App Service.
 
-1. Click **Get publish profile** and save the profile locally.
+1. Go to **Get publish profile** and save the profile locally.
 
     ![Get the publish profile](../deployment/media/tutorial-azure-app-service-get-publish-profile.png)
 
@@ -84,7 +76,7 @@ A publish settings file (*\*.publishsettings*) is different than a publishing pr
         msdeploySite="DeployASPDotNetCore"
         userName="$DeployASPDotNetCore"
         userPWD="abcdefghijklmnopqrstuzwxyz"
-        destinationAppUrl="http://deployaspdotnetcore20180508031824.azurewebsites.net"
+        destinationAppUrl="http://deployaspdotnetcore2021.azurewebsites.net"
         SQLServerDBConnectionString=""
         mySQLDBConnectionString=""
         hostingProviderForumLink=""

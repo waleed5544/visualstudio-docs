@@ -1,5 +1,7 @@
 ---
 title: "Document protection in document-level solutions"
+description: Learn how you can use the protection features of Microsoft Office Word and Microsoft Office Excel in document-level projects.
+ms.custom: SEO-VS-2020
 ms.date: "02/02/2017"
 ms.topic: "conceptual"
 dev_langs:
@@ -13,7 +15,8 @@ helpviewer_keywords:
   - "documents [Office development in Visual Studio], restricted permissions"
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
+ms.technology: office-development
 ms.workload:
   - "office"
 ---
@@ -22,12 +25,12 @@ ms.workload:
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Using Excel, you can turn protection on and off while the workbook is open in the designer. Using Word, you can turn protection on only outside of the designer. At runtime, you can enable or disable protection programmatically for both Word and Excel.
+ Using Excel, you can turn protection on and off while the workbook is open in the designer. Using Word, you can turn protection on only outside of the designer. At run time, you can enable or disable protection programmatically for both Word and Excel.
 
  When document protection is enabled on a document that is open in the designer, all controls are removed from the **Toolbox** or are made unavailable, and you cannot drag anything from the **Data Sources** window to the document.
 
 ## ServerDocument and protected documents
- If a document is protected, the data cache cannot be accessed from outside of the document. You cannot use the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class to retrieve or manipulate data that is cached in a protected document, or use other methods of the <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ServerDocument> class.
+ If a document is protected, the data cache cannot be accessed from outside of the document. You cannot use the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class to retrieve or manipulate data that is cached in a protected document, or use other methods of the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class.
 
 ## Word document protection in the designer
  If you add protection to a Word document or template while it is open in Visual Studio, you cannot start enforcing the protection in the designer. The document is in design mode while it is open in Visual Studio, and it must be in run mode before you can start enforcing protection.

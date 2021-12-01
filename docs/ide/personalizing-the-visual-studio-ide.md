@@ -1,12 +1,15 @@
 ---
 title: Customize the IDE
-ms.date: 11/20/2017
+description: Learn how to personalize the Visual Studio IDE in ways that best support your own development style and requirements.
+ms.custom: SEO-VS-2020
+ms.date: 04/12/2021
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Personalize the Visual Studio IDE
 
@@ -21,24 +24,24 @@ You can choose a default collection of settings that optimizes Visual Studio for
 
 ## General environment options
 
-Many personalization options are exposed through the [Environment Options](../ide/reference/environment-options-dialog-box.md) dialog box. There are two ways to access this dialog box:
+Many personalization options are exposed through the [Environment Options](../ide/reference/general-environment-options-dialog-box.md) dialog box. There are two ways to access this dialog box:
 
 - On the menu bar, choose **Tools** > **Options**, and if it's not already expanded, expand the **Environment** node.
 
-- Press **Ctrl**+**Q**, type **environment** in the search box, and then choose **Environment --> General** from the results.
+- Press **Ctrl**+**Q**, type **environment** in the search box, and then choose **Environment > General** from the results.
 
 > [!TIP]
 > When the Options dialog box appears, you can press **F1** for help on the various settings on that page.
 
 ## Environment color themes
 
-To change the color theme between light, dark and blue, type **environment** in the search box, and then choose **Environment --> General**. In the **Options** dialog box, change the **Color theme** option.
+To change the color theme between Dark, Light, Blue, and Blue (Extra Contrast), type **theme** in the search box, and then choose **Environment > General**. In the **Options** dialog box, change the **Color theme** option.
 
-To change colorization options in the editor, type **environment** in the search box, and then choose **Environment --> Fonts and Colors**. See [How to: Change fonts and colors](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
+To change colorization options in the editor, type **environment** in the search box, and then choose **Environment > Fonts and Colors**. See [How to: Change fonts and colors](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
 
 ### Main menu casing
 
-You can change the main menu casing between **Title Case** ("File") and **All Caps** ("FILE"). Type **environment** in the search box, select **Environment --> General**, and then change the **Apply title case styling to menu bar** option.
+You can change the main menu casing between **Title Case** ("File") and **All Caps** ("FILE"). Type **environment** in the search box, select **Environment > General**, and then change the **Apply title case styling to menu bar** option.
 
 ### Customize menus and toolbars
 

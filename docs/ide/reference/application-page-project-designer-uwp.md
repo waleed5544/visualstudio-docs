@@ -1,20 +1,23 @@
 ---
 title: Application property page for UWP apps
-ms.date: 01/23/2018
+description: Learn how to use the Application page to specify the Universal Windows Platform (UWP) project's assembly and package information, and target Windows 10 and later.
+ms.custom: SEO-VS-2020
+ms.date: 10/26/2021
 ms.topic: reference
 f1_keywords:
-  - AppPackage.Properties.Application
+- AppPackage.Properties.Application
 helpviewer_keywords:
-  - "Application page [UWP project]"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+- Application page [UWP project]
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "uwp"
+- uwp
 ---
 # Application property page (UWP projects)
 
-Use the **Application** property page to specify the Universal Windows Platform (UWP) project's assembly and package information, and target Windows 10 version.
+Use the **Application** property page to specify the Universal Windows Platform (UWP) project's assembly and package information, and to target Windows 10 and later.
 
 ![Application property page](media/application-page-uwp.png)
 
@@ -32,13 +35,29 @@ To access this property programmatically, see <xref:VSLangProj.ProjectProperties
 
 **Assembly Information**&mdash;Choosing this button displays the [Assembly Information dialog box](../../ide/reference/assembly-information-dialog-box.md).
 
-**Package Manifest**&mdash;Choosing this button opens the manifest designer. The manifest designer can also be accessed by choosing the _Package.appxmanifest_ file in **Solution Explorer**. For more information, see [Configure a package with the manifest designer](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
+**Package Manifest**&mdash;Choosing this button opens the manifest designer. The manifest designer can also be accessed by choosing the _Package.appxmanifest_ file in **Solution Explorer**. For more information, see [Configure a package with the manifest designer](/windows/msix/package/packaging-uwp-apps#configure-your-project).
 
 ## Targeting section
 
-You can set the target version and minimum version of Windows 10 for your app by using the drop-down lists in this section. It is recommended that you target the latest version of Windows 10, and if you are developing an enterprise app, that you support an older minimum version too. For more information about which Windows 10 version to choose, see [Choose a UWP version](/windows/uwp/updates-and-versions/choose-a-uwp-version).
+You can set the target version and minimum version of Windows 10 for your app by using the drop-down lists in this section. It is recommended that you target the latest version of Windows 10, and if you are developing an enterprise app, that you support an older minimum version too. For more information about which Windows 10 and later versions to choose, see [Choose a UWP version](/windows/uwp/updates-and-versions/choose-a-uwp-version).
 
-For information about platform targeting in Visual Studio, see [Platform targeting](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting).
+::: moniker range="vs-2017"
+
+For information about platform targeting in Visual Studio, see [Platform targeting](/visualstudio/releases/2017/vs2017-compatibility-vs#platform-targeting).
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+For information about platform targeting in Visual Studio, see [Platform targeting](/visualstudio/releases/2019/compatibility#platform-targeting).
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+For information about platform targeting in Visual Studio, see [Platform targeting](/visualstudio/releases/2022/compatibility#platform-targeting).
+
+::: moniker-end
 
 ## See also
 

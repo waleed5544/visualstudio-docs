@@ -1,19 +1,22 @@
 ---
 title: Upgrade .mdf files
+description: Review options for upgrading a database file (.mdf) after you install a newer version of Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
-  - "SQL Server Express"
-  - "SQL Server LocalDB"
-  - "LocalDB"
-  - "SQLEXPRESS"
-  - "upgrading SQLExpress to SQLExpress"
-  - "upgrading to LocalDB"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+- SQL Server Express
+- SQL Server LocalDB
+- LocalDB
+- SQLEXPRESS
+- upgrading SQLExpress to SQLExpress
+- upgrading to LocalDB
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
-  - "data-storage"
+- data-storage
 ---
 # Upgrade .mdf files
 
@@ -89,9 +92,9 @@ You can also modify a SQL Server Express connection to use LocalDB by opening th
 
 - In Visual Studio, open the project without upgrading it.
 
-    - To run the project, select the **F5** key.
+  - To run the project, select the **F5** key.
 
-    - To edit the database, open the *.mdf* file in **Solution Explorer**, and expand the node in **Server Explorer** to work with your database.
+  - To edit the database, open the *.mdf* file in **Solution Explorer**, and expand the node in **Server Explorer** to work with your database.
 
 ### To make SQL Server Express the default database engine
 

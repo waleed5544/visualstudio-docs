@@ -1,33 +1,32 @@
 ---
 title: General, Environment, Options Dialog Box
-ms.date: 03/28/2019
+description: Learn how to use the General page in the Environment section to change color themes, status bar settings, file extension associations, and more for the IDE.
+ms.custom: SEO-VS-2020
+ms.date: 11/29/2021
 ms.topic: reference
 f1_keywords:
-  - "VS.Message.0x800a002e"
-  - "VS.ToolsOptionsPages.Environment.General"
-  - "VS.Environment.General"
+- VS.Environment.General
+- VS.Message.0x800a002e
+- VS.OptionsDialog.Environment
+- VS.ToolsOptionsPages.Environment
+- VS.ToolsOptionsPages.Environment.General
 helpviewer_keywords:
-  - "MRU lists"
-  - "windows, customizing"
-  - "MDI, environment options"
-  - "speed, environment animation"
-  - "File menu"
-  - "menus, customizing"
-  - "Windows menu customizing"
-  - "status bars, displaying"
-  - "IDE, startup options"
-  - "editors, autocompletion"
-  - "Options dialog box, General Environment"
-  - "General Environment Options dialog box"
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+- recently used file lists
+- Windows menu, customizing
+- status bar, displaying
+- Options dialog box, General Environment
+- General Environment Options dialog box
+- Environment Options dialog box
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Options dialog box: Environment \> General
 
-Use this page to change color themes, status bar settings, and file extension associations, among other options, for the integrated development environment (IDE). You can access the **Options** dialog box by opening the **Tools** menu, choosing **Options**, opening the **Environment** folder and then choosing the **General** page. If this page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.
+Use this page to change color themes, status bar settings, and file extension associations, among other options, for the integrated development environment (IDE). You can access the **Options** dialog box by opening the **Tools** menu, choosing **Options**, opening the **Environment** folder and then choosing the **General** page.
 
 ## Visual Experience
 
@@ -35,7 +34,26 @@ Use this page to change color themes, status bar settings, and file extension as
 
 Choose the **Blue**, **Light**, **Dark**, or **Blue (Extra Contrast)** color theme for the IDE.
 
-You can install additional predefined themes and create custom themes by downloading and installing the **Visual Studio Color Theme Editor** from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). After you install this tool, additional color themes appear in the **Color Theme** list box.
+::: moniker range="vs-2022"
+
+You can also choose to use the theme that Windows uses by selecting **Use system setting**.
+
+::: moniker-end
+
+You can install additional predefined themes and create custom themes by downloading and installing the **Visual Studio Color Theme Designer** for the version that you're currently using, as follows:
+
+- [Color Theme Designer for Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022)
+- [Color Theme Designer for Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner).
+- [Color Theme Editor for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)
+
+After you install this tool, additional color themes appear in the **Color Theme** list box.
+
+::: moniker range="vs-2022"
+
+> [!NOTE]
+> Want even more themes to choose from? Check out the wide range of custom themes on the [**Visual Studio Marketplace**](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Themes&sortBy=Installs). And to see examples of new Visual Studio 2022 custom themes based on VS Code, take a look at the [**Introducing a collection of new Visual Studio themes**](https://devblogs.microsoft.com/visualstudio/custom-themes/) blog post.
+
+::: moniker-end
 
 **Apply title case styling to menu bar**
 
@@ -60,7 +78,7 @@ Specifies whether Visual Studio sets the adjustment to the visual experience aut
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10 has a setting that says **Let Windows try to fix apps so they're not blurry**. Turning that setting **on** is recommended if Visual Studio appears blurry on your monitor. Consider upgrading to [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), which has significantly improved display clarity because it is a per-monitor dots per inch aware application.
+> Windows 10 has a setting that says **Let Windows try to fix apps so they're not blurry**. Turning that setting **on** is recommended if Visual Studio appears blurry on your monitor. Consider upgrading to [Visual Studio 2019](https://visualstudio.microsoft.com/downloads), which has significantly improved display clarity because it is a per-monitor dots per inch aware application.
 
 ::: moniker-end
 
@@ -96,5 +114,4 @@ Specifies that when the **Auto Hide** button is clicked, only the tool window th
 
 ## See also
 
-- [Environment Options Dialog Box](../../ide/reference/environment-options-dialog-box.md)
-- [Customizing window layouts](../../ide/customizing-window-layouts-in-visual-studio.md)
+- [Customize window layouts](../../ide/customizing-window-layouts-in-visual-studio.md)

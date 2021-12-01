@@ -3,19 +3,23 @@ title: Django web project template for Python
 description: Visual Studio provide a comprehensive template for rapid creation of Django web applications with Python.
 ms.date: 11/12/2018
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
-manager: jillfra
-ms.custom: seodec18
+author: rjmolyneaux
+ms.author: rmolyneaux
+manager: jmartens
+ms.technology: vs-python
+
 ms.workload:
   - python
   - data-science
 ---
 
 # Django web project template
-
+::: moniker range="vs-2017"
 [Django](https://www.djangoproject.com/) is a high-level Python framework designed for rapid, secure, and scalable web development. Python support in Visual Studio provides several project templates to set up the structure of a Django-based web application. To use a template in Visual Studio, select **File** > **New** > **Project**, search for "Django", and select from the **Blank Django Web Project**, **Django Web Project**, and **Polls Django Web Project** templates. See the [Learn Django tutorial](learn-django-in-visual-studio-step-01-project-and-solution.md) for a walkthrough of all the templates.
-
+::: moniker-end
+::: moniker range=">=vs-2019"
+[Django](https://www.djangoproject.com/) is a high-level Python framework designed for rapid, secure, and scalable web development. Python support in Visual Studio provides several project templates to set up the structure of a Django-based web application. To use a template in Visual Studio, select **File** > **New** > **Project**, search for "Django", and select from the **Blank Django Web Project** and **Django Web Project** templates. See the [Learn Django tutorial](learn-django-in-visual-studio-step-01-project-and-solution.md) for a walkthrough of all the templates.
+::: moniker-end
 Visual Studio provides full IntelliSense for Django projects:
 
 - Context variables passed into the template:

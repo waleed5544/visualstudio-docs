@@ -1,34 +1,37 @@
 ---
 title: Creating and Configuring Type Members (Class Designer)
+description: Learn how to add members to types on a class diagram and configure those members in the Class Details window.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
-  - "vs.classdetails.method"
-  - "vs.classdetails.property"
-  - "vs.classdetails.parameter"
-  - "vs.classdetails.event"
-  - "vs.classdetails.field"
+- vs.classdetails.method
+- vs.classdetails.property
+- vs.classdetails.parameter
+- vs.classdetails.event
+- vs.classdetails.field
 helpviewer_keywords:
-  - "Class Designer [Visual Studio], member creation"
-  - "type members, modifying in Class Designer"
-  - "parameters [ASP.NET Web Services], adding to methods"
-  - "type members, configuring"
-  - "type members"
-  - "members"
-  - "type members, creating"
-  - "members, creating"
-  - "Class Designer [Visual Studio], type members"
-  - "read-only information, displaying"
-  - "members, configuring"
-  - "methods [Visual Studio], adding parameters"
-  - "Class Details window"
-  - "Class Details window, member creation"
+- Class Designer [Visual Studio], member creation
+- type members, modifying in Class Designer
+- parameters [ASP.NET Web Services], adding to methods
+- type members, configuring
+- type members
+- members
+- type members, creating
+- members, creating
+- Class Designer [Visual Studio], type members
+- read-only information, displaying
+- members, configuring
+- methods [Visual Studio], adding parameters
+- Class Details window
+- Class Details window, member creation
 ms.assetid: 42af8738-3738-4ca7-82ff-edf573a68f96
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
-  - "multiple"
+- multiple
 ---
 # Create and configure type members in Class Designer
 
@@ -116,7 +119,8 @@ You can create a member using any of the following tools:
 
 4. Optionally, specify other details about the member, such as its type.
 
-     **Note:** You can also use keyboard shortcuts to create members. For more information, see [Keyboard and Mouse Shortcuts in the Class Diagram and Class Details window](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md).
+    > [!NOTE]
+    > You can also use keyboard shortcuts to create members. For more information, see [Keyboard and Mouse Shortcuts in the Class Diagram and Class Details window](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md).
 
 ## Modify type members
 
@@ -144,7 +148,7 @@ Each member row displays the following elements:
 
 - **Member Modifier**
 
-     Change the visibility modifier of a member to either `Public` (`public`), `Private` (`private`), `Friend` (`internal`) `Protected` (`protected`), `Protected``Friend` (`protected``internal`), or `Default`.
+     Change the visibility modifier of a member to either `Public` (`public`), `Private` (`private`), `Friend` (`internal`) `Protected` (`protected`), `Protected Friend` (`protected internal`), or `Default`.
 
 - **\<add member>**
 

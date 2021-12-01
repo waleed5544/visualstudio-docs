@@ -1,5 +1,6 @@
 ---
 title: "Rapid Web Site Profiling with VSPerfASPNETCmd | Microsoft Docs"
+description: Learn how the VSPerfASPNETCmd command-line tool enables you to easily profile ASP.NET web applications.
 ms.date: "11/04/2016"
 ms.topic: "conceptual"
 helpviewer_keywords:
@@ -7,7 +8,9 @@ helpviewer_keywords:
   - "VSPerfASPNETCmd"
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-debug
+monikerRange: 'vs-2017'
 ms.workload:
   - "multiple"
 ---
@@ -34,6 +37,8 @@ To profile an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web 
  Sampling is the default profiling method of **VSPerfASPNETCmd** tool and does not have to be specified on the command line. The following command line collects application statistics from the specified web application:
 
  **vsperfaspnetcmd**  *websiteUrl*
+
+ An example of a local server-hosted *websiteUrl* might be *http://localhost/MySite/default.aspx*. An example of an external site is *http://www.contoso.com*. For more information, see the example URLs in [To profile a web site without opening a project in Visual Studio](how-to-collect-performance-data-for-a-web-site.md#to-profile-a-web-site-without-opening-a-project-in-visual-studio).
 
 ## To collect detailed timing data by using the instrumentation method
 

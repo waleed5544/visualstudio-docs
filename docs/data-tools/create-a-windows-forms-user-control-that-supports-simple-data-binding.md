@@ -1,19 +1,22 @@
 ---
-title: Create a user control that supports simple data binding
+title: Create user controls that support simple data binding
+description: Learn to create a Windows Forms user control that supports simple data binding, using the DefaultBindingPropertyAttribute class in Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
-  - "VB"
-  - "CSharp"
+- VB
+- CSharp
 helpviewer_keywords:
-  - "custom controls [Visual Studio], Data Sources Window"
-  - "Data Sources Window, controls"
+- custom controls [Visual Studio], Data Sources Window
+- Data Sources Window, controls
 ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
-  - "data-storage"
+- data-storage
 ---
 # Create a Windows Forms user control that supports simple data binding
 
@@ -107,8 +110,8 @@ For simple controls that support databinding, implement the <xref:System.Compone
 
 2. Replace the code in the **PhoneNumberBox** with the following:
 
-     [!code-csharp[VbRaddataDisplaying#3](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.cs)]
-     [!code-vb[VbRaddataDisplaying#3](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/PhoneNumberBox.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/PhoneNumberBox.vb" id="Snippet3":::
 
 3. From the **Build** menu, choose **Build Solution**.
 
@@ -160,7 +163,7 @@ You can create the data-bound controls by dragging items from the **Data Sources
 
 To create data-bound controls on the form, drag the main **Customers** node from the **Data Sources** window onto the form, and verify that the **PhoneNumberBox** control is used to display the data in the **Phone** column.
 
-     Data-bound controls with descriptive labels appear on the form, along with a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.
+Data-bound controls with descriptive labels appear on the form, along with a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.
 
 ## Run the application
 

@@ -1,14 +1,17 @@
 ---
-title: Logical/advanced operators in search expressions (Help Viewer)
+title: Logical operators in search expressions (Help Viewer)
+description: Understand how to use logical operators and advanced search operators to refine search expressions in Microsoft Help Viewer.
+ms.custom: SEO-VS-2020
 ms.date: 11/02/2017
 ms.topic: reference
 helpviewer_keywords:
   - "Help Viewer, logical operators in search"
   - "logical operators in search [Help Viewer]"
 ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
-author: gewarren
-ms.author: gewarren
-manager: jillfra
+author: ghogen
+ms.author: ghogen
+manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
   - "multiple"
 ---

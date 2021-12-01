@@ -2,21 +2,16 @@
 title: Publish an Azure cloud service
 description: Learn how to configure the various settings in the Visual Studio Publish Azure Application Wizard
 author: ghogen
-manager: jillfra
-assetId: 7d8f1ac9-e439-47e0-a183-0642c4ea1920
-ms.custom: vs-azure
+manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.custom: seodec18
 ---
 # Using the Visual Studio Publish Azure Application Wizard
 
 After you develop a web application in Visual Studio, you can publish that application to an Azure cloud service by using the **Publish Azure Application** wizard.
-
-> [!Note]
-> This article is about deploying to cloud services, not to web sites. For information about deploying to web sites, see [How to Deploy an Azure Web Site](https://social.msdn.microsoft.com/Search/windowsazure?query=How%20to%20Deploy%20an%20Azure%20Web%20Site&Refinement=138&ac=4#refinementChanges=117&pageNumber=1&showMore=false).
 
 ## Accessing the Publish Azure Application wizard
 
@@ -92,7 +87,7 @@ Diagnostics enables you to troubleshoot an Azure cloud service (or Azure virtual
 
 ## Summary page
 
-![Summary](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
+![Summary page](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
 **Target profile** - You can choose to create a publishing profile from the settings that you have chosen. For example, you might create one profile for a test environment and another for production. To save this profile, choose the **Save** icon. The wizard creates the profile and saves it in the Visual Studio project. To modify the profile name, open the **Target profile** list, and then choose **&lt;Manage…&gt;**.
 

@@ -1,16 +1,19 @@
 ---
-title: "Extending and Customizing Tool Windows | Microsoft Docs"
-ms.date: "11/04/2016"
-ms.topic: "conceptual"
+title: Extending and Customizing Tool Windows | Microsoft Docs
+description: Learn about extending and customizing tool windows that Visual Studio provides, including the Properties window, the Output window, and the Task List window.
+ms.custom: SEO-VS-2020
+ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
-  - "user interfaces, essentials"
-  - "tool windows, standard"
+- user interfaces, essentials
+- tool windows, standard
 ms.assetid: 46b2892e-7b2b-4b3f-83a7-b884f1e114ee
-author: madskristensen
-ms.author: madsk
-manager: jillfra
+author: leslierichardson95
+ms.author: lerich
+manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
-  - "vssdk"
+- vssdk
 ---
 # Extend and customize tool windows
 Visual Studio provides several different types of windows, for example tool windows, document windows, and dialog windows. Other windows such as the **Properties** window, the **Output** window, and the **Task List** window, are types of tool windows.
@@ -35,10 +38,12 @@ Visual Studio provides several different types of windows, for example tool wind
  You can subscribe to tool window events: [Subscribe to an event](../extensibility/subscribing-to-an-event.md).
 
 ## Extend existing tool windows
- You can add information about your tool window to a new **Options** page and a new setting on the **Properties** page, write to the **Task List** and **Output** windows. For more information, see [Extend the Properties, Task List, Output, and Options windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md) and [Extend the Properties, Task List, Output, and Options windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md).
+ You can add information about your tool window to a new **Options** page and a new setting on the **Properties** page, write to the **Task List** and **Output** windows. For more information, see [Extend the Properties, Task List, Output, and Options windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md).
 
 ## Modal dialog boxes
  In a Visual Studio extension you should create modal dialog boxes by deriving them from <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow?displayProperty=fullName>, which allows you to control them and the rest of the UI. For more information, see [Create and manage modal dialog boxes](../extensibility/creating-and-managing-modal-dialog-boxes.md).
 
 ## See also
 - [Create an extension with a tool window](../extensibility/creating-an-extension-with-a-tool-window.md)
+- [Extend projects](../extensibility/extending-projects.md)
+- [Extend solutions](../extensibility/extending-solutions.md)

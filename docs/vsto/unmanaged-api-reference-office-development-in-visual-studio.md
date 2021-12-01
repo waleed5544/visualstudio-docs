@@ -1,7 +1,10 @@
 ---
 title: "Unmanaged API reference (Office development in Visual Studio)"
-ms.date: "02/02/2017"
-ms.topic: "conceptual"
+description: The unmanaged API reference is used to help load-managed VSTO Add-ins. You can also create your own VSTO Add-in loader component by implementing this interface.
+ms.custom: SEO-VS-2020
+titleSuffix: ""
+ms.date: "08/14/2019"
+ms.topic: "reference"
 dev_langs:
   - "VB"
   - "CSharp"
@@ -10,7 +13,8 @@ helpviewer_keywords:
   - "Office development in Visual Studio, unmanaged API reference"
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
+ms.technology: office-development
 ms.workload:
   - "office"
 ---
@@ -18,8 +22,7 @@ ms.workload:
 
 Starting with the 2007 Microsoft Office system, Office applications use the [IManagedAddin interface](../vsto/imanagedaddin-interface.md) interface to call into a VSTO Add-in loader component that is included with the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. This component is used to help load-managed VSTO Add-ins. You can create your own VSTO Add-in loader component by implementing this interface.
 
-> [!NOTE]
-> Interested in developing solutions that extend the Office experience across [multiple platforms](https://dev.office.com/add-in-availability)? Check out the new [Office Add-ins model](https://dev.office.com/docs/add-ins/overview/office-add-ins). Office Add-ins have a small footprint compared to VSTO add-ins and solutions, and you can build them by using almost any web programming technology, such as HTML5, JavaScript, CSS3, and XML.
+[!include[Add-ins note](includes/addinsnote.md)]
 
 ## In this section
 

@@ -1,22 +1,26 @@
 ---
-title: "Reformatting Code in a Legacy Language Service | Microsoft Docs"
-ms.date: "11/04/2016"
-ms.topic: "conceptual"
+title: Reformatting Code in a Legacy Language Service | Microsoft Docs
+description: Learn about enabling support for source code reformatting for a Visual Studio legacy language service.
+ms.custom: SEO-VS-2020
+ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
-  - "reformatting code, supporting in language services [managed package framework]"
-  - "language services [managed package framework], reformatting code"
+- reformatting code, supporting in language services [managed package framework]
+- language services [managed package framework], reformatting code
 ms.assetid: 08bb3375-8fef-4f4e-9efa-0d7333bab0eb
-author: madskristensen
-ms.author: madsk
-manager: jillfra
+author: leslierichardson95
+ms.author: lerich
+manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
-  - "vssdk"
+- vssdk
 ---
 # Reformatting Code in a Legacy Language Service
 
 In [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] source code can be reformatted by normalizing the use of indentations and whitespace. This can include inserting or removing spaces or tabs at the beginning of each line, adding new lines between lines, or replacing spaces with tabs or tabs with spaces.
 
->**Note:** Inserting or deleting newline characters can affect markers such as breakpoints and bookmarks, but adding or removing spaces or tabs does not affect markers.
+> [!NOTE]
+> Inserting or deleting newline characters can affect markers such as breakpoints and bookmarks, but adding or removing spaces or tabs does not affect markers.
 
 Users can start a reformatting operation by selecting **Format Selection** or **Format Document** from the **Advanced** menu on the **Edit** menu. A reformatting operation can also be triggered when a code snippet or a particular character is inserted. For example, when you type a closing brace in C#, everything between the matching open brace and the close brace is automatically indented to the proper level.
 
@@ -176,6 +180,6 @@ namespace MyLanguagePackage
 }
 ```
 
-## See Also
+## See also
 
 - [Legacy Language Service Features](legacy-language-service-features1.md)

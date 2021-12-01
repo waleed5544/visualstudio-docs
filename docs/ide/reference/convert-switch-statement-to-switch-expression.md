@@ -1,10 +1,13 @@
 ---
 title: Convert switch statement to switch expression
+description: Learn how to use the Quick Actions and Refactorings menu to convert a switch statement to a C# 8.0 switch expression.
+ms.custom: SEO-VS-2020
 ms.date: 06/19/2019
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
   - CSharp
 ms.workload: 
@@ -24,7 +27,7 @@ This refactoring applies to:
 
 ## How-to
 
-1. In your project file, [set the language version to preview](/dotnet/csharp/language-reference/configure-language-version#set-the-language-version-in-visual-studio) since `switch` expressions are a new C# 8.0 feature.
+1. In your project file, [set the language version to preview](/dotnet/csharp/language-reference/configure-language-version#edit-the-project-file) since `switch` expressions are a new C# 8.0 feature.
 2. Place your cursor in the `switch` keyword and press **Ctrl**+**.** to trigger the **Quick Actions and Refactorings** menu.
 3. Select **Convert switch statement to expression**.
 

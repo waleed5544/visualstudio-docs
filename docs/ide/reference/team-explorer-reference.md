@@ -1,16 +1,22 @@
 ---
 title: Team Explorer reference
+description: Learn about the various functions in Team Explorer to manage work and coordinate with other team members to develop a project.
+ms.custom: SEO-VS-2020
 ms.date: 12/04/2018
 ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
-ms.manager: jillfra
+ms.manager: jmartens
+monikerRange: "<=vs-2019"
 ---
 # Team Explorer reference
 
 This article provides links to Azure DevOps articles about the various functions in **Team Explorer**.
 
-Use the **Team Explorer** tool window to coordinate your code efforts with other team members to develop a project, and to manage work that's assigned to you, your team, or your projects. **Team Explorer** connects Visual Studio to Git and GitHub repositories, Team Foundation version control (TFVC) repositories, and projects hosted on [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) or an on-premises [Azure DevOps Server](/tfs/index) (formerly known as TFS). You can manage source code, work items, and builds.
+Use the **Team Explorer** tool window to coordinate your code efforts with other team members to develop a project, and to manage work that's assigned to you, your team, or your projects. **Team Explorer** connects Visual Studio to Git and GitHub repositories, Team Foundation version control (TFVC) repositories, and projects hosted on [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) or an on-premises [Azure DevOps Server](/azure/devops/index-all) (formerly known as TFS). You can manage source code, work items, and builds.
+
+> [!IMPORTANT]
+> Starting with the release of Visual Studio 2019 [**version 16.8**](/visualstudio/releases/2019/release-notes-history), the Git version control experience is the default. If you'd like to learn more about how it compares with Team Explorer, see the [**Side-by-side comparison of Git and Team Explorer**](../../version-control/git-team-explorer-feature-comparison.md) page.
 
 ## Home page
 
@@ -20,7 +26,7 @@ After you [connect to a project](../connect-team-project.md) in **Team Explorer*
 - [Web Portal](/azure/devops/project/navigation/index)
 - [Task Board](/azure/devops/boards/sprints/task-board)
 
-The **Home** page has different functions depending on whether you're connected to a [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) or [Team Foundation Version Control (TFVC)](/azure/devops/repos/tfvc/overview) repository.
+The **Home** page has different functions depending on whether you're connected to a [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true) or [Team Foundation Version Control (TFVC)](/azure/devops/repos/tfvc/overview) repository.
 
 > [!TIP]
 > For a comparison of the two version control systems, see [Choose the right version control for your project (Azure DevOps)](/azure/devops/repos/tfvc/comparison-git-tfvc).
@@ -69,7 +75,8 @@ The **Work Items** page lets you see [work item](/azure/devops/boards/work-items
 - [Use the query editor to list and manage queries](/azure/devops/boards/queries/using-queries)
 - [Organize query folders and set query permissions](/azure/devops/boards/queries/set-query-permissions)
 - [Open query in Excel](/azure/devops/boards/backlogs/office/bulk-add-modify-work-items-excel)
-- [Open query in Project](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
+
+- [Open query in Project](/previous-versions/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 - [Email query results list using Outlook](/azure/devops/boards/queries/share-plans)
 - [Create reports from query in Excel](/azure/devops/report/excel/create-status-and-trend-excel-reports) (TFS only)
 

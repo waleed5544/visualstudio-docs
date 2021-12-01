@@ -1,5 +1,7 @@
 ---
 title: "IntelliTrace Features | Microsoft Docs"
+description: Learn about IntelliTrace features in Visual Studio. Use IntelliTrace to record events and method calls in your application.
+ms.custom: SEO-VS-2020
 ms.date: "09/19/2018"
 ms.topic: "conceptual"
 helpviewer_keywords:
@@ -17,7 +19,8 @@ helpviewer_keywords:
   - "debugging [Visual Studio ALM], IntelliTrace"
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: jillfra
+manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
   - "multiple"
 ---
@@ -42,7 +45,7 @@ If you're debugging, stop debugging. Go to **Tools > Options > IntelliTrace > In
 
 ## <a name="Snapshots"></a> Collect snapshots (C#, Visual Basic, C++)
 
-This isn't enabled by default, but IntelliTrace can capture snapshots of your application at every breakpoint and debugger step event, and you can view these snapshots in a historical debugging session. A snapshot gives you a view of your full application state. To enable the capture of snapshots, go to **Tools > Options > IntelliTrace > General**, and select **IntelliTrace snapshots (managed and native)**. For more information, see [Inspect previous app states using IntelliTrace](../debugger/view-historical-application-state.md)
+This isn't enabled by default, but IntelliTrace can capture snapshots of your application at every breakpoint and debugger step event, and you can view these snapshots in a historical debugging session. A snapshot gives you a view of your full application state. To enable the capture of snapshots, go to **Tools > Options > IntelliTrace > General**, and select **IntelliTrace snapshots (managed and native)**. For more information, see [Inspect previous app states using IntelliTrace](../debugger/view-historical-application-state.md).
 
 Snapshots are available in Visual Studio Enterprise 2017 version 15.5 and higher, and it requires Windows 10 Anniversary Update or above.  For .NET Core and ASP.NET Core apps, Visual Studio Enterprise 2017 version 15.7 is required. For native apps targeting Windows, Visual Studio Enterprise 2017 version 15.9 Preview 2 is required.
 
@@ -65,7 +68,7 @@ You can use the navigation gutter that appears to the left of the code window. I
 
 The navigation gutter allows you to move forwards and backwards through method calls and events in historical debugging mode. For more information about historical debugging, see [Historical Debugging](../debugger/historical-debugging.md). It has a number of commands:
 
-|||
+|Command|Description|
 |-|-|
 |**Set Debugger Context Here**|Set the debugging context to the call timeframe where it appears.<br /><br /> This icon appears only on the current call stack.|
 |**Return to Call Site**|Move the pointer and debugging context back to where the current function was called.<br /><br /> If you are in Live Debugging mode, this command turns Historical Debugging on. If you navigate back to the original execution break, Historical Debugging is turned off and Live Debugging is turned on.|
@@ -117,7 +120,7 @@ When you save IntelliTrace data to file, you get one .itrace file for each proce
 
 ## Forums
 
-[Visual Studio Debugger](http://go.microsoft.com/fwlink/?LinkId=262263)
+[Visual Studio Debugger](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 ## Videos
 

@@ -1,6 +1,8 @@
 ---
 title: "Walkthrough: Create your first VSTO Add-in for Excel"
-ms.date: "02/02/2017"
+description: Create an application-level Add-in for Microsoft Excel. The features that you create are available to the application itself, regardless of which workbooks are open.
+ms.custom: SEO-VS-2020
+ms.date: "08/14/2019"
 ms.topic: "conceptual"
 dev_langs:
   - "VB"
@@ -12,7 +14,8 @@ helpviewer_keywords:
   - "Excel [Office development in Visual Studio], creating your first project"
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
+ms.technology: office-development
 ms.workload:
   - "office"
 ---
@@ -20,6 +23,8 @@ ms.workload:
   This introductory walkthrough shows you how to create an application-level Add-in for Microsoft Office Excel. The features that you create in this kind of solution are available to the application itself, regardless of which workbooks are open.
 
  [!INCLUDE[appliesto_xlallapp](../vsto/includes/appliesto-xlallapp-md.md)]
+
+[!include[Add-ins note](includes/addinsnote.md)]
 
  This walkthrough illustrates the following tasks:
 
@@ -73,12 +78,12 @@ ms.workload:
 
     When the user saves a workbook, the event handler adds new text at the start of the active worksheet.
 
-    [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
 2. If you are using C#, add the following required code to the `ThisAddIn_Startup` event handler. This code is used to connect the `Application_WorkbookBeforeSave` event handler with the <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> event.
 
-    [!code-csharp[Trin_ExcelAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
    To modify the workbook when it is saved, the previous code examples use the following objects:
 
